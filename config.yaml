@@ -1,8 +1,8 @@
 site:
   name: Rio Daily
   url: "https://pedro-lucas-martins.github.io/rio-daily/"
-  group_email: ""    # Google Group, e.g. rio-daily@googlegroups.com (blank hides the sign-up)
-  contact: ""        # contact shown in the privacy policy
+  group_email: "rio-daily-news@googlegroups.com"
+  contact: "rio-daily-news+owner@googlegroups.com"   # reaches the group owner
 
 news:
   max_age_days: 3
