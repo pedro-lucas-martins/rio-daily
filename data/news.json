@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-25T13:16:11.585004+00:00",
+ "updated": "2026-11-25T13:36:53.006642+00:00",
  "items": [
+  {
+   "id": "n40c66ce5e",
+   "title": "Weather forecast: Rio de Janeiro/RJ has rain and thunderstorms with a maximum of 36°C",
+   "summary": "",
+   "original": "Previsão do Tempo: Rio de Janeiro/RJ tem chuva e trovoadas com máxima de 36°C",
+   "source": "Brasil 61",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPb2JqUVVRX2hOY1h5U1FMRHNhdHIzbHQtVUFmVlFvbjdCU0U0eGk1V3pleFdxYXJJWmhXZ0FuM2RyaGFRN0JodzYzQnFKSzhjTFRNbzFzTzliSmFMZEJhT2RyVV83XzBYblUyUjh4bmlCV2NYWWNIeXZJd2dmOHFCNFlSVWFkZXhlS2h3UzV3TGF1Qnl6YV9NX0pEdUotMFlaWjh2QzMtLS1DdVhzSkVv0gG0AUFVX3lxTFBiTTM3bWZESWc4MXBfZjY0VFhzZzhaVXVhUGR6WkNlX1ZiRG5BT3U4NlJOY3llZ3ZWOHZ0VlNDUTR5c2pZM1NlekF2WF9RWEF1djNQa01MR1lJUE9ITWRiTUdqNS1RNHRqRVNvcnBNdzJzc0gwX2piRzEzTUgyRm1QZUtKX1BGTlc5WG94MllZZkh3c1JnNUR3VTNZeHktUmh4ZS1wMDRpVEtRX0N5X3d1QUJiRw?oc=5",
+   "when": "2026-11-25T13:27:26+00:00",
+   "tone": "caution",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 2
+  },
+  {
+   "id": "n55c7b66c3",
+   "title": "Rio Summer Festival at the Museum of Tomorrow",
+   "summary": "",
+   "original": "Festival de Verão do Rio no Museu do Amanhã",
+   "source": "Rota Cult",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUHdSb1lURTRDQkFVdWxTYXNuMnBycHRBaWZJUmdqd3FoTDhJLWZDTkdIMkxtYUlyajJ2UEpIUlJ5YTBhX0RxZG9WdW9UVFVUczFVUDZyNWpVd0h6M0ttcGJobVBYVHlvc19CcjBtRXFsNjU0YzVCS1QxdFlpWHpvdmR3?oc=5",
+   "when": "2026-11-25T13:25:20+00:00",
+   "tone": "good",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 2
+  },
+  {
+   "id": "nb7078da8d",
+   "title": "Hydratei occupies kiosk on the beach of Ipanema with free experiences, distribution of gifts and beauty activities in summer",
+   "summary": "",
+   "original": "Hidratei ocupa quiosque na praia de Ipanema com experiências gratuitas, distribuição de brindes e atividades de beleza no verão",
+   "source": "Clube AG",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ISnc3UVNlTGppal9UV1cyMG9tSXJPX196d2tnbWJYRl9JOENOOGhBU2lIcjlUS29tOFdvSmJKbDgxT3Z3ZzUzM1NTQzVvNVBCRWlhQkYxblB0UQ?oc=5",
+   "when": "2026-11-25T12:59:33+00:00",
+   "tone": "good",
+   "grave": false,
+   "crime": false,
+   "areas": [
+    "ipanema-leblon"
+   ],
+   "translated": true,
+   "also": 0
+  },
   {
    "id": "n8a963f2a2",
    "title": "Rio has forecast of heavy rain, lightning and gusts of wind in the late afternoon",
@@ -99,7 +146,7 @@
    "summary": "",
    "original": "Tem gigante no Jardim Botânico: exposição revela os segredos do mundo dos insetos",
    "source": "O GLOBO",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPWFZtS2R0OUdwRjNxZ2gyRzNYNlFCYURVdGlBUUVPOGN2ZHg2ekZtUk1vMEl1RmlHcHBKNnZFRFlTdTMtRGFLQVhfb1FVUGNmNVgyRUg3bnNCNE5uc244d003RTRoZ01KcDlRbFZXZEhqd0FjNTVwZlA1aE5XVTZoTUg0T2t3NkV4RHF0bWpfOUstSnIwWlZwRFF0Zk5CdTFOTy1xT3ZjLWxDQ25va2ZrMDI0d0VwNFJBUUVjSTlaTjdXVWtLVi1BZ0oyaUoxYkw3eEE1cWlPcnJxamPSAeoBQVVfeXFMTUItTXVwNGtWbnNrRmowV0JIOFV5bXE5VTI5ZFhSYjduY0JkLTFpT2NBcGFjYmpIcl9yWkJFc3ZheEJyLU1SU2FzNEpjaEYxTUFqLU1JWTRDaXJrenFKQjhsRGs3dXgwalpSTXJfcHIwSlNrN1ZUeFhvWjFpR3RoOE5QdW5Jdm40clNLWloyd090QTJEUlVWa0l5NHlPNzRTNEdPR01UbTd5SnZBNXVCaDJoSFBnTXJGTG93QmZKTzZTdUhiWWxGTnREb1ZqWWJXRWNGOENfY0luVUdIcHVXXzhGMVBTSnEybDVn?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNQi1NdXA0a1Zuc2tGajBXQkg4VXltcTlVMjlkWFJiN25jQmQtMWlPY0FwYWNiakhyX3JaQkVzdmF4QnItTVJTYXM0SmNoRjFNQWotTUlZNENpcmt6cUpCOGxEazd1eDBqWlJNcl9wcjBKU2s3VlR4WG9aMWlHdGg4TlB1bkl2bjRyU0taWjJ3T3RBMkRSVVZrSXk0eU83NFM0R09HTVRtN3lKdkE1dUJoMmhIUGdNckZMb3dCZkpPNlN1SGJZbEZOdERvVmpZYldFY0Y4Q19jSW5VR0hwdVdfOEYxUFNKcTJsNWfSAeoBQVVfeXFMTUItTXVwNGtWbnNrRmowV0JIOFV5bXE5VTI5ZFhSYjduY0JkLTFpT2NBcGFjYmpIcl9yWkJFc3ZheEJyLU1SU2FzNEpjaEYxTUFqLU1JWTRDaXJrenFKQjhsRGs3dXgwalpSTXJfcHIwSlNrN1ZUeFhvWjFpR3RoOE5QdW5Jdm40clNLWloyd090QTJEUlVWa0l5NHlPNzRTNEdPR01UbTd5SnZBNXVCaDJoSFBnTXJGTG93QmZKTzZTdUhiWWxGTnREb1ZqWWJXRWNGOENfY0luVUdIcHVXXzhGMVBTSnEybDVn?oc=5",
    "when": "2026-11-25T11:00:00+00:00",
    "tone": "good",
    "grave": false,
@@ -160,36 +207,6 @@
    "also": 0
   },
   {
-   "id": "n5cce28773",
-   "title": "Summer festival of Rio gathers great names of music in five days in the Museum of Tomorrow",
-   "summary": "",
-   "original": "FESTIVAL DE VERÃO DO RIO REÚNE GRANDES NOMES DA MÚSICA EM CINCO DIAS NO MUSEU DO AMANHÃ",
-   "source": "Rio Já",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaTZrLTU3V2VFT0dHUkoxM3R6eHh5SFpYankwM2hBN04yRUx4U1QzaEk3aU8xdVFicWtmeVhxam9oUEpJMERZMTFtNHZlSkRjdktqZEVTVG9vV1JNNE15eXRmai15YTNMREtWUE9CZE9Zejh1cUlzN1BtMGluM1FpV1JLYlEzWGdqeEtoZUxTSjh6LTNaM05SQlpOTDI2UzhZeXNGRTdpQ3VIZC1qYVlWZ1Fwb0N3QQ?oc=5",
-   "when": "2026-11-25T09:35:25+00:00",
-   "tone": "good",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 1
-  },
-  {
-   "id": "ne58f5fd24",
-   "title": "Weather in Rio de Janeiro: cloudy, 35.1°C and 90% rain",
-   "summary": "",
-   "original": "Previsão do tempo em Rio de Janeiro: nublado, 35.1°C e 90% de chuva",
-   "source": "www.bra1.com.br",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZktYNVFKRW83WWptT3JLem14TzFmSkVZUC14dXFaTGhUREZnS0lBaWpTZmJFZ3VHSkFlZFFhc0xQTWItbWdJSGVyNFNDaFNjWjBQbHE2Z1NYT2VaU3UzeHdPLVVHZnlDR05VQ3E0aEZRdWRRNVY0QzBrZEFCRWg4MGtzU3FIMlZ6ZkI0TUZQQ2trbjhLRWZ3bHFteENFbFVSTmx4VGZiT0g2enM?oc=5",
-   "when": "2026-11-25T09:00:00+00:00",
-   "tone": "caution",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 4
-  },
-  {
    "id": "nf4f9385c3",
    "title": "Gávea Station works begin the stage of installation of rails in the subway",
    "summary": "",
@@ -222,6 +239,21 @@
    "also": 4
   },
   {
+   "id": "nc1aa43fcd",
+   "title": "Rio Prefecture engages in project to promote sustainable tourism and Cetaceans observation",
+   "summary": "",
+   "original": "Prefeitura do Rio se engaja em projeto de promoção do turismo sustentável e de observação de Cetáceos",
+   "source": "Diário do Rio",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNOThnV1pWd2JVSnQ1TFNTQWVtRFVRZG1CMGxMOHVDZjkxOHZWckFsQThkOFFOeXNJMUZkMlZHVXlQWlRxc2VQVnZfU3dQMV9kMEQ5ck9EUUhSeUpoWElPdUxfYkxHZGJPdHk1VFhHNmIwM0dkM1MwYTZPQTR6d1VSVm9WNWJVRkMtajZJeDUtMkNyTnFxTHdFenVUTUJpb0VXODlTRW9kUFdBRG0yeG9nYUpORnJzeUM1bmhpQ0Jyc2ZBWjUwLUlkRGt3WWZjdFZ0Uy1haTJocmRnUVBLS0UyQ1NPNU9ObWI0Smlr?oc=5",
+   "when": "2026-11-25T02:35:07+00:00",
+   "tone": "caution",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 0
+  },
+  {
    "id": "n8678942d7",
    "title": "81-year-old is assaulted during attempted assault in Santa Teresa",
    "summary": "",
@@ -251,23 +283,6 @@
    "crime": false,
    "areas": [
     "botafogo-urca"
-   ],
-   "translated": true,
-   "also": 0
-  },
-  {
-   "id": "nbd9ac3380",
-   "title": "MPRJ archive investigation against bar owner in Lapa by poster against US and Israel",
-   "summary": "",
-   "original": "MPRJ arquiva investigação contra dono de bar na Lapa por cartaz contra EUA e Israel",
-   "source": "tmc.com.br",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaXM2a0dZb3FSdjVtVDlVV0NESW1pMU5lal9rRE5HY2xhLUhiOHJ5NmxlX0dLNVh2b1hWc2twVWwtc3dWVXhBSlJzanczVGpuX1AyVVpMTDZmYmIySER6LXp1SnBDM1M5N1hQdlhPM09Rb0tvZzdYeWdJOEdtSGM0ZmdSbXVmUnhiYVhMUnhZbklXRURXRGZqd05jTXRfa1J0QjRfaDVSQzNpSDhwTHAw?oc=5",
-   "when": "2026-11-24T23:52:07+00:00",
-   "tone": "caution",
-   "grave": false,
-   "crime": false,
-   "areas": [
-    "centro-lapa"
    ],
    "translated": true,
    "also": 0
@@ -306,6 +321,21 @@
    "also": 0
   },
   {
+   "id": "nec5ee62aa",
+   "title": "Cruise season in Rio de Janeiro must move more than R $ 240 million in the Rio de Janeiro economy amid the record of foreign visitors",
+   "summary": "",
+   "original": "Temporada de cruzeiros no Rio de Janeiro deve movimentar mais de R$ 240 milhões na economia fluminense em meio a recorde de visitantes estrangeiros",
+   "source": "VOENEWS",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPb21ES29GdmdlZHhkdlhUTEdaeE1ial9HX0E1V0ZvSWYzejBicGxoOVFXUHIzNWVoVzltSGpBNXBmTGJUNk5kOHFzZ3pPREczTENWakwxclA5S1FRNmRaeUJsdnBLRkhrMmVwNlBEaUxrMkp2R3FRTXRpeUs5ak9BQzBTcHEtMVpEeXdWSVFpN3NLNmRCZTFaZWdDUC1TSy05QXR2YmFOc2h6cWZMZG5fZnNLS0xvOE5qa2piU2Z2TVJ5R1JEQTNzZ3p5Wm1KUUFCVzJwNHMyb1lXdTMybENDc0hTSTN5MjI0MlhTVFYtYm1ycFZRU2Z2WkxZRDVIOW8?oc=5",
+   "when": "2026-11-24T16:39:48+00:00",
+   "tone": "good",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 0
+  },
+  {
    "id": "n9ff069ac9",
    "title": "Rio's MST block opens rehearsals for Carnival 2027 and invites new members",
    "summary": "",
@@ -334,21 +364,6 @@
    "areas": [],
    "translated": true,
    "also": 1
-  },
-  {
-   "id": "n4957fbbc7",
-   "title": "Rio Summer Festival occupies the Museum of Tomorrow from 30/12 to 3/1 with Alok, Ivete and Pabllo",
-   "summary": "",
-   "original": "Festival de Verão do Rio ocupa o Museu do Amanhã de 30/12 a 3/1 com Alok, Ivete e Pabllo",
-   "source": "ABIH-RJ",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbG53Q2NrMGpXY2hOWTVVX1JXQXVQQS1uclNhQjhLd2thb2lNNkltNEcycVpwWEVWN1FQWGtUMTg0VDlzZkF6a3ZFakRINVdVZzBMX1lpaHBOSUJ6V3U5UkhvUEE4VmstT1J6cVRTaTZfdTFKR0kwa3FRSks3THp2M3psci1NN0IzdEdDdXBINFlLWVlqS19kS1hHZlRFSmhzNFRhM2thZDZwVHEtVzR2TGZBbDRNbWZ2UGc?oc=5",
-   "when": "2026-11-24T15:06:54+00:00",
-   "tone": "good",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 0
   },
   {
    "id": "n4295304be",
@@ -398,21 +413,6 @@
    "also": 4
   },
   {
-   "id": "n9e35d8a52",
-   "title": "Rio Carnival celebrates Samba National Day with traditional mini-sports this weekend",
-   "summary": "",
-   "original": "Rio Carnaval celebra Dia Nacional do Samba com tradicionais minidesfiles neste fim de semana",
-   "source": "Ultima Hora Online",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZzJTUTlPS3hJQXctRVpqam9tT094ekRNanh0M2t1OGRRbV9GblJnNEpYRWdlWUptZUhxRjhFVW9OQTdrcXFzUWRaRFY3aHR2aVVMVE9RQ2N5NFhwLUU3UHIwT19hNVh4YlltOVZJTTIwcHpncVdyMUdtOV9CcFMybHBsUU4zMlV4d2F0V1dsdlA1TERfa1Q5eVFNMmotZy1DOFc5ZHhNcGhic3RHZlRvNFNXbzU3dFhiR2NSdk96LURJMER4dzlFQThqMnZxU3BBYVE?oc=5",
-   "when": "2026-11-24T14:28:03+00:00",
-   "tone": "good",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 0
-  },
-  {
    "id": "nec3cce573",
    "title": "American tourist shot dead in Rio had announced trip on social networks",
    "summary": "",
@@ -425,7 +425,7 @@
    "crime": true,
    "areas": [],
    "translated": true,
-   "also": 24
+   "also": 16
   },
   {
    "id": "n56f3b36eb",
@@ -443,23 +443,6 @@
    ],
    "translated": true,
    "also": 1
-  },
-  {
-   "id": "na02160207",
-   "title": "VIDEO: App driver reacts to attempted robbery and runs over thief in Lapa, Rio",
-   "summary": "",
-   "original": "VÍDEO: Motorista de aplicativo reage a tentativa de assalto e atropela ladrão na Lapa, no Rio",
-   "source": "R7",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZnMxMmFnWlhQRXI1clVIMjZyamEycUxjSGNnZDNjMGgyRDRLeVFXUWxabW1JaDM5SC1sV1ExdHBXT0o2TTlnRlJnNEZ0ak5PVS0xeFRtc3FnanoxT0ktUTJ5MlNlN19mX3RkZEpiTDhXYmstVk1zTUJYLS1lOTBFOHNSRVFlWmVaNVRuSXQ1SnBGczB3Z3Q5bk5lQ1IwVzlLM1YxclJEWlgzaGdXNG0zdUk4dkFqSnZXazJvOG4wZWFjSWtoNVpVSTg4WWpTSVVrY0ltM0VodDNVRTFYeTlBZ2JwOFo3cUNqeWU0?oc=5",
-   "when": "2026-11-23T12:22:33+00:00",
-   "tone": "bad",
-   "grave": false,
-   "crime": true,
-   "areas": [
-    "centro-lapa"
-   ],
-   "translated": true,
-   "also": 0
   },
   {
    "id": "n414a454b9",
