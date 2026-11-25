@@ -6,20 +6,21 @@ on:
   workflow_dispatch:
     inputs:
       approve: {description: "ID of a pending item to approve (blank = just update)", required: false, type: string}
-permissions: {contents: write, pages: write, id-token: write}
+permissions: {contents: read}
 concurrency: {group: rio-daily, cancel-in-progress: false}
 jobs:
-  run:
+  collect:
     # Scheduled runs stay off until the repository variable ENABLED is set to true.
     if: github.event_name == 'workflow_dispatch' || vars.ENABLED == 'true'
     runs-on: ubuntu-latest
-    environment: {name: github-pages}
+    permissions: {contents: write}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with: {ref: main}
+      - uses: actions/setup-python@v7
         with: {python-version: "3.13", cache: pip}
       - run: pip install -r requirements.txt
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with: {path: models, key: translate-pb_en-1_9}
       - name: Approve
         if: inputs.approve != ''
@@ -32,11 +33,37 @@ jobs:
           FOGOCRUZADO_EMAIL: ${{ secrets.FOGOCRUZADO_EMAIL }}
           FOGOCRUZADO_PASSWORD: ${{ secrets.FOGOCRUZADO_PASSWORD }}
         run: python -m rio "$MODE" && python -m rio pending
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with: {path: site}
-      - uses: actions/deploy-pages@v4
-      - name: Newsletter
-        if: github.event.schedule == '0 11 * * *'
+      - name: Save data
+        if: always()
+        run: |
+          git config user.name "rio-daily-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Update data"
+          git pull --rebase && git push
+  # Separate job: in the same job GitHub may not find the artifact yet (actions/deploy-pages#451).
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions: {pages: write, id-token: write}
+    environment: {name: github-pages, url: "${{ steps.pages.outputs.page_url }}"}
+    steps:
+      - id: pages
+        uses: actions/deploy-pages@v5
+  newsletter:
+    needs: deploy
+    if: github.event.schedule == '0 11 * * *'
+    runs-on: ubuntu-latest
+    permissions: {contents: write}
+    steps:
+      - uses: actions/checkout@v7
+        with: {ref: main}
+      - uses: actions/setup-python@v7
+        with: {python-version: "3.13", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Send
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
