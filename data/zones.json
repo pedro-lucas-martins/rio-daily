@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T14:53:48.886684+00:00",
+ "updated": "2026-11-25T15:14:53.727951+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
  "areas": [
@@ -19,7 +19,7 @@
    "why": [
     "3,756 street robberies and 9,294 phone or pocket thefts reported in 12 months",
     "2% fewer (weighted) in the last 3 months than a year earlier",
-    "1 shootings recorded in 30 days",
+    "1 shooting recorded in 30 days",
     "1 crime report in the news in 14 days"
    ],
    "robbery": 3756,
@@ -41,7 +41,7 @@
    "why": [
     "1,250 street robberies and 3,566 phone or pocket thefts reported in 12 months",
     "48% more (weighted) in the last 3 months than a year earlier",
-    "1 shootings recorded in 30 days",
+    "1 shooting recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 1250,
@@ -255,7 +255,7 @@
    "why": [
     "303 street robberies and 993 phone or pocket thefts reported in 12 months",
     "29% fewer (weighted) in the last 3 months than a year earlier",
-    "1 shootings recorded in 30 days",
+    "1 shooting recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 303,
@@ -309,7 +309,7 @@
     "Rocinha"
    ],
    "score": 9,
-   "computed": "green",
+   "computed": "unknown",
    "trend": "up",
    "why": [
     "7 street robberies and 65 phone or pocket thefts reported in 12 months",

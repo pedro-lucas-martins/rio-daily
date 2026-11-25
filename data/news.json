@@ -1,6 +1,21 @@
 {
- "updated": "2026-11-25T14:53:30.667029+00:00",
+ "updated": "2026-11-25T15:14:41.899789+00:00",
  "items": [
+  {
+   "id": "n4ef7f9086",
+   "title": "State of Rio has extreme alert for rain of more than 200mm from this Wednesday",
+   "summary": "",
+   "original": "Estado do Rio tem alerta extremo para chuva de mais de 200mm a partir desta quarta",
+   "source": "A Seguir Niterói",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQeGo1SEdlalJPMHZoTUFOMmpjOFYyQXJOSG5RYjJna0tmcU55U2h0cXBUZTlVaE1FNzk2ZG0tU2hjSWV5c0NHclppOHdpS0xjaVU1eGdkWllTdzdfM2lsZ29qbWVVNmNFcnZKVDRpWEFDS01OMnpTMUhycUpoQ2JjZEZocHhjcnl6WmxubVl5cGxVclFGckI4VG9GT2VpTklFZERnOVI3QVhoS18yWW00cUc5eWlsaVZQQTl1SkdhYw?oc=5",
+   "when": "2026-11-25T14:56:39+00:00",
+   "tone": "caution",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 2
+  },
   {
    "id": "nf3d5778b3",
    "title": "Storm in RJ: forecast of heavy rainfall puts municipalities on alert and postpones planning in the state",
@@ -76,7 +91,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 1
+   "also": 3
   },
   {
    "id": "n55c7b66c3",
@@ -123,7 +138,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 3
+   "also": 2
   },
   {
    "id": "n8daf4bcfc",
@@ -140,7 +155,7 @@
     "santa-teresa"
    ],
    "translated": true,
-   "also": 0
+   "also": 1
   },
   {
    "id": "n259eaf7b6",
@@ -170,7 +185,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 1
+   "also": 2
   },
   {
    "id": "nb9a8e57ef",
@@ -200,7 +215,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 0
+   "also": 1
   },
   {
    "id": "nc52c152f1",
@@ -267,23 +282,6 @@
    "areas": [],
    "translated": true,
    "also": 0
-  },
-  {
-   "id": "nf4f9385c3",
-   "title": "Gávea Station works begin the stage of installation of rails in the subway",
-   "summary": "",
-   "original": "Obras da Estação Gávea iniciam a fase de instalação dos trilhos no metrô",
-   "source": "Governo do Estado do Rio de Janeiro",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vODdBUFZ2YnJ0UUx1UmNqMjJOWVFuR09iT3h5Q24tTjdBRHhLajJMcFdWWWFXa3ZFT0YwMDdjck1ERFgzQ3lTUUJodlJORzdkV3Jv?oc=5",
-   "when": "2026-11-25T07:11:34+00:00",
-   "tone": "caution",
-   "grave": false,
-   "crime": false,
-   "areas": [
-    "lagoa-gavea"
-   ],
-   "translated": true,
-   "also": 1
   },
   {
    "id": "nc971c6c61",
@@ -411,6 +409,21 @@
    "also": 0
   },
   {
+   "id": "n2cae78b3e",
+   "title": "Accident in Central do Brasil closes Rio subway station and affects Lines 1, 2 and 4 after smoke",
+   "summary": "",
+   "original": "Acidente na Central do Brasil fecha estação do metrô do Rio e afeta Linhas 1, 2 e 4 após fumaça",
+   "source": "Mix Vale",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQenZaNm9OY0xCVlpRSmZrbVV6TEFRUTJiakRnb01XbzBfMmlTdUQtZktLWDBvRlNPcm1CY1JtUnRBRUstZ0N0MUNLTHFyTURWTGpUbTZLSlBaaFgyQ1J1S2dzQVVyc3hPUzNTV1VCd1pyYVZaT2ZBWkZRTDFZYWgwS3JhQ3dyVXJyWGlCVDdyTFFGOWNQS241TU9aNGVNVm5OQW5MWEc0bVVhbW15UnNQUUxZd3RWTXNHVU1RM3I1OFY4TEhiQmtvakFvQTI3QQ?oc=5",
+   "when": "2026-11-23T17:11:57+00:00",
+   "tone": "bad",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 5
+  },
+  {
    "id": "nec3cce573",
    "title": "American tourist shot dead in Rio had announced trip on social networks",
    "summary": "",
@@ -423,7 +436,7 @@
    "crime": true,
    "areas": [],
    "translated": true,
-   "also": 11
+   "also": 13
   },
   {
    "id": "n56f3b36eb",
@@ -441,6 +454,23 @@
    ],
    "translated": true,
    "also": 1
+  },
+  {
+   "id": "na02160207",
+   "title": "VIDEO: App driver reacts to attempted robbery and runs over thief in Lapa, Rio",
+   "summary": "",
+   "original": "VÍDEO: Motorista de aplicativo reage a tentativa de assalto e atropela ladrão na Lapa, no Rio",
+   "source": "R7",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZnMxMmFnWlhQRXI1clVIMjZyamEycUxjSGNnZDNjMGgyRDRLeVFXUWxabW1JaDM5SC1sV1ExdHBXT0o2TTlnRlJnNEZ0ak5PVS0xeFRtc3FnanoxT0ktUTJ5MlNlN19mX3RkZEpiTDhXYmstVk1zTUJYLS1lOTBFOHNSRVFlWmVaNVRuSXQ1SnBGczB3Z3Q5bk5lQ1IwVzlLM1YxclJEWlgzaGdXNG0zdUk4dkFqSnZXazJvOG4wZWFjSWtoNVpVSTg4WWpTSVVrY0ltM0VodDNVRTFYeTlBZ2JwOFo3cUNqeWU0?oc=5",
+   "when": "2026-11-23T12:22:33+00:00",
+   "tone": "bad",
+   "grave": false,
+   "crime": true,
+   "areas": [
+    "centro-lapa"
+   ],
+   "translated": true,
+   "also": 0
   },
   {
    "id": "n414a454b9",

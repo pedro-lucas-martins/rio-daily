@@ -1,7 +1,7 @@
 {
  "centro-lapa": "orange",
  "barra": "orange",
- "airport-road": "orange",
+ "airport-road": "red",
  "flamengo-catete": "yellow",
  "copacabana": "yellow",
  "tijuca": "yellow",
@@ -13,5 +13,5 @@
  "lagoa-gavea": "green",
  "santa-teresa": "green",
  "botafogo-urca": "green",
- "rocinha": "green"
+ "rocinha": "unknown"
 }
