@@ -1,5 +1,5 @@
 """Build the static site and the newsletter from collected data."""
-import json, shutil
+import hashlib, json, shutil
 from datetime import date, datetime
 from urllib.parse import quote
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -40,6 +40,11 @@ def spark(series, w=640, h=160):
     x = [date.fromisoformat(d).toordinal() for d, _ in series]   # real spacing: missing days leave a gap
     lo, hi = min(p for _, p in series), max(p for _, p in series)
     return " ".join(f"{10 + (a - x[0]) * (w - 20) / (x[-1] - x[0]):.1f},{15 + (hi - p) * (h - 30) / ((hi - lo) or 1):.1f}" for a, (_, p) in zip(x, series))
+
+
+def version():
+    """Changes with the CSS and JS, so browsers never pair new pages with old styles."""
+    return hashlib.sha1(b"".join((ROOT / "static" / f).read_bytes() for f in ("style.css", "site.js"))).hexdigest()[:8]
 
 
 def hero_map(areas, w=620, h=560):
@@ -84,7 +89,7 @@ def context(hist=None, demo=False, watch=None):
     areas.sort(key=lambda a: (list(LEVELS).index(a["level"]), -a["score"]))
     msg = "Rio Daily: news in English, hot zones and flights from Poland"
     group = c["group_email"]
-    return {"site": c, "items": items, "areas": areas, "pending": len(pending), "flights": flights, "watch": watch, "map": hero_map(areas), "sources": len({i["source"] for i in items}), "year": today.year,
+    return {"site": c, "items": items, "areas": areas, "pending": len(pending), "flights": flights, "watch": watch, "map": hero_map(areas), "sources": len({i["source"] for i in items}), "year": today.year, "ver": version(),
             "join_addr": group.replace("@", "+subscribe@"), "join_gmail": "https://mail.google.com/mail/?view=cm&to=" + quote(group.replace("@", "+subscribe@"), safe="") + "&su=Subscribe",
             "alerts": [i for i in items if i["alert"]], "levels": LEVELS, "tones": TONES, "zones": z, "demo": demo, "cfg": cfg,
             "date": today.strftime("%A, %d %B %Y"), "updated": today.strftime("%d %b %Y, %H:%M"), "stale": n.get("errors", []) + z.get("errors", []),

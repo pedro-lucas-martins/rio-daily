@@ -231,6 +231,8 @@ def test_landing_pages(tmp_path, monkeypatch):
     html = (tmp_path / "site" / "index.html").read_text()
     assert "No news available" in html and "No verified prices" in html and "data-join" in html and "wa.me" in html
     assert "rio-daily-news%2Bsubscribe%40googlegroups.com" in html and "fonts.googleapis" not in html
+    assert f"style.css?v={build.version()}" in html
+    assert "prefers-color-scheme" not in html + (tmp_path / "static" / "style.css").read_text()
     evil = {"id": "n1", "title": "<script>x</script>", "original": "o", "source": "s", "url": "https://e.example", "when": common.now().isoformat(),
             "tone": "bad", "grave": False, "crime": True, "areas": [], "translated": True, "summary": ""}
     common.save("news.json", {"items": [evil, dict(evil, id="n2", title="held", grave=True)]})

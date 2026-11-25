@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{% block title %}{{ site.name }}{% endblock %}</title><meta name="description" content="Rio de Janeiro for visitors: local news in English, a crime map and flight prices from Poland.">
 <meta property="og:title" content="{{ site.name }}"><meta property="og:description" content="Local news in English, a crime map and flight prices from Poland."><meta property="og:type" content="website">{% if site.url %}<meta property="og:url" content="{{ site.url }}">{% endif %}
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF9F6"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1116">
+<meta name="theme-color" content="#FAF9F6"><meta name="color-scheme" content="light">
 <link rel="icon" href="static/logo.svg" type="image/svg+xml"><link rel="preload" href="static/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="static/style.css"><script>document.documentElement.classList.add('js')</script>{% block head %}{% endblock %}</head><body class="p-{{ page }}">
+<link rel="stylesheet" href="static/style.css?v={{ ver }}"><script>document.documentElement.classList.add('js')</script>{% block head %}{% endblock %}</head><body class="p-{{ page }}">
 <a class="skip" href="#content">Skip to content</a>
 {% if demo %}<div class="demo">SAMPLE DATA: the flight prices on this preview are invented</div>{% endif %}
 {% macro links() %}{% for id, label in [('news','News'),('zones','Hot zones'),('flights','Flights'),('about','About')] %}<a href="{{ id }}.html"{% if page == id %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}{% endmacro %}
@@ -21,4 +21,4 @@
 <p class="addr"><code>{{ join_addr }}</code><button type="button" class="btn ghost small" data-copy="{{ join_addr }}">Copy</button></p>
 <p class="acts"><a class="btn" href="{{ join }}">Open my email app</a><a class="btn ghost" target="_blank" rel="noopener" href="{{ join_gmail }}">Use Gmail on the web</a></p>
 <p class="fine">Free. Unsubscribe from any email. <a href="about.html#privacy">Privacy</a></p></dialog>{% endif %}
-<script src="static/site.js" defer></script></body></html>
+<script src="static/site.js?v={{ ver }}" defer></script></body></html>
