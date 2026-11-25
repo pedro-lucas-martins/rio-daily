@@ -1,5 +1,27 @@
-{% extends "base.html" %}{% from "_card.html" import card with context %}{% block main %}<h1>Rio today</h1><p class="sub">{{ date }}</p>
-{% for a in alerts %}<div class="alert"><b>Alert:</b> <a href="{{ a.url }}">{{ a.title }}</a> <small>({{ a.source }})</small></div>{% endfor %}
-<h2>News</h2><div class="grid">{% for t in ['bad','caution','good'] %}{% for i in (items|selectattr('tone','equalto',t)|list)[:3] %}{{ card(i) }}{% endfor %}{% endfor %}</div>{% if not items %}<p>No news available right now.</p>{% endif %}
-<h2>Hot zones</h2><ul class="chips">{% for a in areas[:6] %}<li><a class="lv {{ a.level }}" href="zones.html#{{ a.id }}">{{ a.name }}: {{ a.label }}</a></li>{% endfor %}</ul><p><a href="zones.html">Open the map</a></p>
-<h2>Flights from Poland</h2>{% if flights %}<p class="price">{{ flights[0].price|pln }}</p><p>{{ flights[0].out|join(' → ') }}, {{ flights[0].depart }} to {{ flights[0].return }}. <a href="flights.html">All prices</a></p>{% else %}<p>No verified prices yet.</p>{% endif %}{% endblock %}
+{% extends "base.html" %}
+{% macro ico(n) %}<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{% if n == 'news' %}<path d="M5 4h11v16H7a2 2 0 0 1-2-2zM16 9h3v9a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/>{% elif n == 'zone' %}<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/>{% elif n == 'plane' %}<path d="M3 13l7-1 4-8 2 .5-1.500 7 4.500-.5 1.500-2 1 .3-.8 3.700.8 3.700-1 .3-1.500-2-4.500-.5 1.500 7-2 .5-4-8-7-1z"/>{% else %}<path d="M3 6h18v12H3zM3 7l9 7 9-7"/>{% endif %}</svg>{% endmacro %}
+{% macro arrow() %}<svg class="ico arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>{% endmacro %}
+{% block main %}
+{% if alerts %}<section class="alerts wrap" aria-label="Alerts">{% for a in alerts %}<p><b>Alert</b> <a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.title }}</a> <small>{{ a.source }}, {{ a.date }}. Machine translated.</small></p>{% endfor %}</section>{% endif %}
+<section class="hero wrap"><div class="say"><h1>Know Rio before you go out.</h1><p class="lead">Local news in English, a crime map, and flight prices from Poland.</p>
+<p class="acts">{% if join %}<a class="btn" href="{{ join }}" data-join>Get the daily email</a>{% endif %}<a class="btn ghost" href="zones.html">Open the map</a></p></div>
+<figure class="rio"><svg viewBox="0 0 {{ map.w }} {{ map.h }}" role="img" aria-label="Map of Rio areas coloured by reported crime level"><g class="land">{% for p in map.base %}<path d="{{ p }}"/>{% endfor %}</g>{% for p in map.areas %}<a href="zones.html#{{ p.id }}" tabindex="-1"><path class="z {{ p.level }}" d="{{ p.d }}"><title>{{ p.name }}: {{ p.label }}</title></path></a>{% endfor %}</svg>
+<figcaption>{% for k, v in levels.items() %}<span><i class="dot {{ k }}"></i>{{ v }}</span>{% endfor %}<small>Reported crime, areas compared with each other. "Lower" does not mean safe.</small></figcaption></figure></section>
+
+<section class="wrap sec" id="today"><div class="head rise"><h2>What is going on today</h2><p>{{ date }}</p></div>
+<div class="today"><article class="panel lead-news rise"><h3>{{ ico('news') }}News, translated</h3>
+{% if items %}<ol class="heads">{% for t in ['bad','caution','good'] %}{% for i in (items|rejectattr('alert')|selectattr('tone','equalto',t)|list)[:2] %}<li class="{{ t }}"><span>{{ tones[t] }}</span><a href="{{ i.url }}" target="_blank" rel="noopener">{{ i.title }}</a><small>{{ i.source }}, {{ i.date }}</small></li>{% endfor %}{% endfor %}</ol><p class="fine">Translated from Portuguese by machine: check the source.</p>{% else %}<p>No news available right now.</p>{% endif %}
+<a class="more" href="news.html">Read all news{{ arrow() }}</a></article>
+<article class="panel rise"><h3>{{ ico('zone') }}Hot zones</h3>{% if areas %}<ul class="zlist">{% for a in areas[:7] %}<li><a href="zones.html#{{ a.id }}"><i class="dot {{ a.level }}"></i><span>{{ a.name }}</span><b>{{ a.label }}</b></a></li>{% endfor %}</ul>{% else %}<p>Zone data is not available right now.</p>{% endif %}<a class="more" href="zones.html">See every area{{ arrow() }}</a></article>
+<article class="fare rise"><h3>{{ ico('plane') }}Poland to Rio</h3>{% if flights %}{% set f = flights[0] %}<p class="price">{{ f.price|pln }}</p><p>{{ f.out[0] }} to GIG, {{ f.depart|day }} to {{ f.return|day }}</p><p class="fine">Round trip via {{ f.out[1:-1]|join(', ') or 'no stop' }}. No São Paulo airport either way. Checked {{ f.found[:10]|day }}.</p>{% else %}<p>No verified prices yet.</p>{% endif %}<a class="more" href="flights.html">Compare dates{{ arrow() }}</a></article></div></section>
+
+<section class="how"><div class="wrap sec"><h2 class="rise">How it works</h2><div class="steps">
+<div class="big rise"><h3>{{ ico('news') }}Local sources, in English</h3><p>Brazilian headlines are gathered through the day, filtered for what affects a visitor, and translated. Every story links to its original.</p></div>
+<div class="rise"><h3>{{ ico('zone') }}Crime data on a map</h3><p>Police reports{% if zones.has_shootings %}, recorded shootings{% endif %} and recent news, area by area, with the reasons for each level.</p></div>
+<div class="rise"><h3>{{ ico('plane') }}Fares without São Paulo</h3><p>Every segment is checked both ways, and prices are in PLN.</p></div>
+<div class="rise"><h3>{{ ico('mail') }}One email a day</h3><p>Sent around 8:00 in Rio. For emergencies, call 190.</p></div></div></div></section>
+
+<section class="wrap sec facts rise" aria-label="Today in numbers"><h2>Behind today's page</h2><dl><div><dt>stories published</dt><dd>{{ items|length }}</dd></div><div><dt>news sources</dt><dd>{{ sources }}</dd></div><div><dt>areas compared</dt><dd>{{ areas|length }}</dd></div><div><dt>fares verified, last 15 days</dt><dd>{{ flights|length }}</dd></div></dl><p class="fine">Counted from the current data.{% if zones.official_until %} Police figures run to {{ zones.official_until }}.{% endif %} <a href="about.html">Method and limits</a></p></section>
+
+<section class="wrap"><div class="end rise"><h2>Rio in your inbox, every morning.</h2><p class="acts">{% if join %}<a class="btn light" href="{{ join }}" data-join>Get the daily email</a>{% endif %}<a class="btn line" href="{{ share }}" target="_blank" rel="noopener">Share on WhatsApp</a></p></div></section>
+{% endblock %}

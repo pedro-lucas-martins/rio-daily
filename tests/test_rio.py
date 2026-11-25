@@ -216,3 +216,24 @@ def test_bad_login_is_clear_and_not_recorded(monkeypatch, tmp_path):
 def test_underreported_never_green_even_with_shootings():
     z = zones.score(CFG["areas"], CFG["zones"], {}, 24322, {"copacabana": {"count": 1, "weight": 1}}, {}, datetime.now(timezone.utc))
     assert {a["id"]: a["computed"] for a in z}["rocinha"] == "unknown"
+
+
+def test_landing_pages(tmp_path, monkeypatch):
+    import shutil
+    from rio import build
+    real = common.ROOT / "data" / "bairros.geojson"
+    monkeypatch.setattr(build, "DATA", tmp_path)
+    shutil.copy(real, tmp_path / "bairros.geojson")
+    monkeypatch.setattr(build, "ROOT", tmp_path)
+    for d in ("templates", "static"):
+        shutil.copytree(common.ROOT / d, tmp_path / d)
+    build.build()      # no data at all must still give valid pages
+    html = (tmp_path / "site" / "index.html").read_text()
+    assert "No news available" in html and "No verified prices" in html and "data-join" in html and "wa.me" in html
+    assert "rio-daily-news%2Bsubscribe%40googlegroups.com" in html and "fonts.googleapis" not in html
+    evil = {"id": "n1", "title": "<script>x</script>", "original": "o", "source": "s", "url": "https://e.example", "when": common.now().isoformat(),
+            "tone": "bad", "grave": False, "crime": True, "areas": [], "translated": True, "summary": ""}
+    common.save("news.json", {"items": [evil, dict(evil, id="n2", title="held", grave=True)]})
+    build.build()
+    html = (tmp_path / "site" / "index.html").read_text()
+    assert "&lt;script&gt;x" in html and "held" not in html

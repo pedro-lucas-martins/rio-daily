@@ -42,6 +42,31 @@ def spark(series, w=640, h=160):
     return " ".join(f"{10 + (a - x[0]) * (w - 20) / (x[-1] - x[0]):.1f},{15 + (hi - p) * (h - 30) / ((hi - lo) or 1):.1f}" for a, (_, p) in zip(x, series))
 
 
+def hero_map(areas, w=620, h=560):
+    """Inline SVG of the visitor areas, cropped to the city and simplified."""
+    lon0, lon1, lat1 = -43.43, -43.145, -22.79
+    k = w / (lon1 - lon0)
+    xy = lambda c: ((c[0] - lon0) * k, (lat1 - c[1]) * k / 0.92)
+    where = {norm(b): a for a in areas for b in a["bairros"]}
+    base, zones = [], []
+    for f in json.loads((DATA / "bairros.geojson").read_text(encoding="utf-8"))["features"]:
+        g = f["geometry"]
+        d = ""
+        for poly in (g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]):
+            pts = []
+            for p in map(xy, poly[0]):
+                if not pts or abs(p[0] - pts[-1][0]) + abs(p[1] - pts[-1][1]) > 2:
+                    pts.append(p)
+            xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+            if len(pts) < 4 or max(xs) < 0 or min(xs) > w or max(ys) < 0 or min(ys) > h:
+                continue
+            d += "M" + "L".join(f"{x:.0f} {y:.0f}" for x, y in pts) + "Z"
+        if d:
+            a = where.get(norm(f["properties"]["nome"]))
+            zones.append({"d": d, "id": a["id"], "name": a["name"], "level": a["level"], "label": a["label"]}) if a else base.append(d)
+    return {"w": w, "h": h, "base": base, "areas": zones}
+
+
 def context(hist=None, demo=False, watch=None):
     cfg, n, z = config(), load("news.json", {"items": []}), load("zones.json", {"areas": []})
     items, areas, pending = review.apply(n["items"], z["areas"])
@@ -56,9 +81,11 @@ def context(hist=None, demo=False, watch=None):
     for i in items:
         i["date"] = datetime.fromisoformat(i["when"]).astimezone(RIO_TZ).strftime("%d %b, %H:%M")
     c = cfg["site"]
+    areas.sort(key=lambda a: (list(LEVELS).index(a["level"]), -a["score"]))
     msg = "Rio Daily: news in English, hot zones and flights from Poland"
     group = c["group_email"]
-    return {"site": c, "items": items, "areas": areas, "pending": len(pending), "flights": flights, "watch": watch,
+    return {"site": c, "items": items, "areas": areas, "pending": len(pending), "flights": flights, "watch": watch, "map": hero_map(areas), "sources": len({i["source"] for i in items}), "year": today.year,
+            "join_addr": group.replace("@", "+subscribe@"), "join_gmail": "https://mail.google.com/mail/?view=cm&to=" + quote(group.replace("@", "+subscribe@"), safe="") + "&su=Subscribe",
             "alerts": [i for i in items if i["alert"]], "levels": LEVELS, "tones": TONES, "zones": z, "demo": demo, "cfg": cfg,
             "date": today.strftime("%A, %d %B %Y"), "updated": today.strftime("%d %b %Y, %H:%M"), "stale": n.get("errors", []) + z.get("errors", []),
             "share": "https://wa.me/?text=" + quote(msg + (" " + c["url"] if c["url"] else "")),
@@ -73,6 +100,7 @@ def build(out="site", hist=None, demo=False, watch=None):
     dst.mkdir()
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
     env.filters["pln"] = lambda v: f"{v:,.0f} PLN".replace(",", " ")
+    env.filters["day"] = lambda v: date.fromisoformat(v).strftime("%d %b %Y").lstrip("0")
     for page in ("index", "news", "zones", "flights", "about"):
         (dst / f"{page}.html").write_text(env.get_template(f"{page}.html").render(page=page, **ctx), encoding="utf-8")
     (dst / "newsletter.html").write_text(env.get_template("newsletter.html").render(page="mail", monday=now().astimezone(RIO_TZ).weekday() == 0, **ctx), encoding="utf-8")
