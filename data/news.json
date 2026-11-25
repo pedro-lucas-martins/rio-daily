@@ -1,6 +1,38 @@
 {
- "updated": "2026-11-25T13:41:03.853530+00:00",
+ "updated": "2026-11-25T13:52:45.367742+00:00",
  "items": [
+  {
+   "id": "nae034181c",
+   "title": "Include Network promotes jobs for People with Disabilities at Largo da Carioca Metro station",
+   "summary": "",
+   "original": "Rede Incluir promove feirão de empregos para Pessoas com Deficiência na estação Metrô Largo da Carioca",
+   "source": "Povo na Rua",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQjUtcFlkTUVxNnJjQWhvOFZ0TWhCTFpBdklBM3FIZWFzc2tFNk92aWFvaDdUQklubU9qMEtqWHVWSDJfUUZfM2V2bmhiZEZGcGFpcVpCM3Z0SEFSbG52WEFrNDMyVWdfamlhRDBoWTFSbDEzVE5keFFrUVlkci1xNXRJTl9vcXZvd3FEeEZLaG83bzgta2phMUo4MVhOWnJ3SXdrZHd5dEhEdUpIc0pQMmtCTDhZY0IzSk5SZWpER0hnN1hfcWNr?oc=5",
+   "when": "2026-11-25T13:38:39+00:00",
+   "tone": "caution",
+   "grave": false,
+   "crime": false,
+   "areas": [],
+   "translated": true,
+   "also": 1
+  },
+  {
+   "id": "nc42b04860",
+   "title": "King and Queen of the Sea returns to Copacabana: the largest beach sports festival in the world is with open registrations",
+   "summary": "",
+   "original": "Rei e Rainha do Mar retorna a Copacabana: maior festival de esportes de praia do mundo está com inscrições abertas",
+   "source": "O GLOBO",
+   "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOaS1nd3FkNUpmWmlrQ1BWVzVTV3hkXzJHaUpaMEl6NmZrTmZRSmRkRzlKaklhei1kMldHNmc1SGtYT0N5dkowa1VQWVI1TE9fbG9SNGh5MzFla0plaFhyY3RibWs0WlF0ejZPMWVDcWtzY19RQnpXcWhvSkVJNlJDT1RPZ0s3RlZTMVJmRFRGSEdCT2xoTzRMVl9ZWllsYkZpazBMUThhNjZYRklZQ0xjcVdlNmR2SW9FUWR2OFN1UVBieWNONkRVeVBKOFBNSDRUeWcwdnFqVWZKVlhwM1JCMW1yUWFwZllZTUh4WVBVYWs2bHlmdEJPWERlM2ZjNS0zNU9UZ1RB0gGUAkFVX3lxTE1zTmFzYVQ2OS05VVpGOVkzQUVzcGhabjd6cHhOaVh2SkIyamVtMDhpUms4MGxnc1NTcnR2U0NVWVNUekllUXhvMHlIc0FuVGhWYjJOVkh5eHNFUmVTbU82cURtT0p5WGZSX2JmSk9rTUJlWEZMSi1fRlRwYVRJZXJRWmFHZ01zMDd0bzB1M1ZSMHlManNKbHdKOFNMdU5vZjBPV0ZHd1hNWFJPaktwcXVEaVNmWFVFSEs4ZklVbjA0OUhQeEVVRElNQURDbTNtS00tWlV2ODZlM2tmQi1rdE9vZzFfc1lhamtwMlIxZkZBb3VIUVo1bkZfNlFNQS1QSWNkem1adUUxbnpQcXhzNTlWUWc4OQ?oc=5",
+   "when": "2026-11-25T13:35:31+00:00",
+   "tone": "good",
+   "grave": false,
+   "crime": false,
+   "areas": [
+    "copacabana"
+   ],
+   "translated": true,
+   "also": 2
+  },
   {
    "id": "n40c66ce5e",
    "title": "Weather forecast: Rio de Janeiro/RJ has rain and thunderstorms with a maximum of 36°C",
@@ -14,7 +46,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 2
+   "also": 4
   },
   {
    "id": "n55c7b66c3",
@@ -61,7 +93,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 3
+   "also": 2
   },
   {
    "id": "n8daf4bcfc",
@@ -123,7 +155,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 0
+   "also": 1
   },
   {
    "id": "nb9a8e57ef",
@@ -153,7 +185,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 0
+   "also": 1
   },
   {
    "id": "nc52c152f1",
@@ -266,7 +298,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 4
+   "also": 3
   },
   {
    "id": "n8678942d7",
@@ -314,23 +346,6 @@
    "grave": false,
    "crime": false,
    "areas": [],
-   "translated": true,
-   "also": 0
-  },
-  {
-   "id": "nbd9ac3380",
-   "title": "MPRJ archive investigation against bar owner in Lapa by poster against US and Israel",
-   "summary": "",
-   "original": "MPRJ arquiva investigação contra dono de bar na Lapa por cartaz contra EUA e Israel",
-   "source": "tmc.com.br",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaXM2a0dZb3FSdjVtVDlVV0NESW1pMU5lal9rRE5HY2xhLUhiOHJ5NmxlX0dLNVh2b1hWc2twVWwtc3dWVXhBSlJzanczVGpuX1AyVVpMTDZmYmIySER6LXp1SnBDM1M5N1hQdlhPM09Rb0tvZzdYeWdJOEdtSGM0ZmdSbXVmUnhiYVhMUnhZbklXRURXRGZqd05jTXRfa1J0QjRfaDVSQzNpSDhwTHAw?oc=5",
-   "when": "2026-11-24T23:52:07+00:00",
-   "tone": "caution",
-   "grave": false,
-   "crime": false,
-   "areas": [
-    "centro-lapa"
-   ],
    "translated": true,
    "also": 0
   },
@@ -395,19 +410,19 @@
    "also": 0
   },
   {
-   "id": "n4295304be",
-   "title": "Rio Fantastik Festival 2026 will have free horror movies and tribute to Nuno Leal Maia",
+   "id": "n2cae78b3e",
+   "title": "Accident in Central do Brasil closes Rio subway station and affects Lines 1, 2 and 4 after smoke",
    "summary": "",
-   "original": "Rio Fantastik Festival 2026 terá filmes de terror gratuitos e homenagem a Nuno Leal Maia",
-   "source": "jwave.com.br",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVXJFTGZHNjdCYzdrUko3VXBVNUNkU0RRTjVWV0pUQ0F5UWtxREVTdXlOSXEyaWg3ZVR3azE2cXJCTnExWTdGelo1a3l0RUoyTm9RdU80RjFCSDdST3NVb1gtZkNoenctOTFsekRRX3J1Zi1RQmJlek12OE1sMnRXUmxWYk43MEFMOXkzVzFwQVg2a2tzcEdDV1pqWERsOTFPSDZhZU1fR0JEN0NOVlpjOEtpUnpyZ250ajB0TUU3UQ?oc=5",
-   "when": "2026-11-24T14:43:53+00:00",
-   "tone": "good",
+   "original": "Acidente na Central do Brasil fecha estação do metrô do Rio e afeta Linhas 1, 2 e 4 após fumaça",
+   "source": "Mix Vale",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQenZaNm9OY0xCVlpRSmZrbVV6TEFRUTJiakRnb01XbzBfMmlTdUQtZktLWDBvRlNPcm1CY1JtUnRBRUstZ0N0MUNLTHFyTURWTGpUbTZLSlBaaFgyQ1J1S2dzQVVyc3hPUzNTV1VCd1pyYVZaT2ZBWkZRTDFZYWgwS3JhQ3dyVXJyWGlCVDdyTFFGOWNQS241TU9aNGVNVm5OQW5MWEc0bVVhbW15UnNQUUxZd3RWTXNHVU1RM3I1OFY4TEhiQmtvakFvQTI3QQ?oc=5",
+   "when": "2026-11-23T17:11:57+00:00",
+   "tone": "bad",
    "grave": false,
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 0
+   "also": 5
   },
   {
    "id": "nec3cce573",
@@ -440,6 +455,23 @@
    ],
    "translated": true,
    "also": 1
+  },
+  {
+   "id": "na02160207",
+   "title": "VIDEO: App driver reacts to attempted robbery and runs over thief in Lapa, Rio",
+   "summary": "",
+   "original": "VÍDEO: Motorista de aplicativo reage a tentativa de assalto e atropela ladrão na Lapa, no Rio",
+   "source": "R7",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZnMxMmFnWlhQRXI1clVIMjZyamEycUxjSGNnZDNjMGgyRDRLeVFXUWxabW1JaDM5SC1sV1ExdHBXT0o2TTlnRlJnNEZ0ak5PVS0xeFRtc3FnanoxT0ktUTJ5MlNlN19mX3RkZEpiTDhXYmstVk1zTUJYLS1lOTBFOHNSRVFlWmVaNVRuSXQ1SnBGczB3Z3Q5bk5lQ1IwVzlLM1YxclJEWlgzaGdXNG0zdUk4dkFqSnZXazJvOG4wZWFjSWtoNVpVSTg4WWpTSVVrY0ltM0VodDNVRTFYeTlBZ2JwOFo3cUNqeWU0?oc=5",
+   "when": "2026-11-23T12:22:33+00:00",
+   "tone": "bad",
+   "grave": false,
+   "crime": true,
+   "areas": [
+    "centro-lapa"
+   ],
+   "translated": true,
+   "also": 0
   },
   {
    "id": "n414a454b9",
