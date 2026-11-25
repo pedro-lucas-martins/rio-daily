@@ -8,11 +8,17 @@ from .common import RIO_TZ, ROOT, load, now, save
 def send(ctx, test=False):
     """A test goes only to the sending account itself, never to the group, and does not count as today's email."""
     user, pw, to = (os.getenv(k) for k in ("GMAIL_USER", "GMAIL_APP_PASSWORD", "NEWSLETTER_TO"))
+    # Copied app passwords carry ordinary or non-breaking spaces.
+    user, pw, to = (re.sub(r"\s+", "", v or "") for v in (user, pw, to))
     if test:
         to = user
     today = now().astimezone(RIO_TZ).date().isoformat()
     if not (user and pw and to):
         return "newsletter not configured: not sent"
+    if not re.fullmatch(r"[^@]+@[^@]+\.[^@]+", user):
+        return "GMAIL_USER is not a full email address: not sent"
+    if not re.fullmatch(r"[a-zA-Z]{16}", pw):
+        return "GMAIL_APP_PASSWORD is not a 16-letter app password: not sent"
     if not test and load("sent.json", {}).get("last") == today:
         return "already sent today"
     updated = load("news.json", {}).get("updated")
@@ -28,10 +34,13 @@ def send(ctx, test=False):
     lines = [f"- {i['title']} ({i['source']}) {i['url']}" for i in ctx["items"][:10]]
     m.set_content("\n".join(["Rio Daily", *lines, "", ctx["site"]["url"]]))
     m.add_alternative(html, subtype="html")
-    # Recorded first: after a crash, a missed email is better than a duplicate.
-    if not test:
-        save("sent.json", {"last": today, "levels": {a["id"]: a["level"] for a in ctx["areas"]}})
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=60) as s:
-        s.login(user, pw)
+        try:
+            s.login(user, pw)
+        except (smtplib.SMTPAuthenticationError, smtplib.SMTPServerDisconnected):
+            return "Gmail refused the login: not sent"     # Gmail may just hang up on wrong details
+        # Recorded after login, before sending: a missed email is better than a duplicate.
+        if not test:
+            save("sent.json", {"last": today, "levels": {a["id"]: a["level"] for a in ctx["areas"]}})
         s.send_message(m)
     return "sent"

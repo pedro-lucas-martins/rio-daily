@@ -112,7 +112,7 @@ def test_email_once_per_day(monkeypatch, tmp_path):
     monkeypatch.setattr(newsletter, "ROOT", tmp_path)
     (tmp_path / "site").mkdir(); (tmp_path / "site" / "newsletter.html").write_text("<p>x</p>")
     for k in ("GMAIL_USER", "GMAIL_APP_PASSWORD", "NEWSLETTER_TO"):
-        monkeypatch.setenv(k, "a@example.com")
+        monkeypatch.setenv(k, "abcdefghijklmnop" if "PASS" in k else "a@example.com")
     common.save("news.json", {"updated": common.now().isoformat()})
     ctx = {"items": [{"title": "T\nBcc: z", "source": "s", "url": "u"}], "alerts": [], "flights": [], "areas": [], "site": {"url": ""}}
     assert newsletter.send(ctx) == "sent" and newsletter.send(ctx) == "already sent today" and len(sent) == 1
@@ -186,9 +186,33 @@ def test_test_email_goes_only_to_sender(monkeypatch, tmp_path):
     monkeypatch.setattr(smtplib, "SMTP_SSL", S)
     monkeypatch.setattr(newsletter, "ROOT", tmp_path)
     (tmp_path / "site").mkdir(); (tmp_path / "site" / "newsletter.html").write_text("<p>x</p>")
-    monkeypatch.setenv("GMAIL_USER", "me@example.com"); monkeypatch.setenv("GMAIL_APP_PASSWORD", "p"); monkeypatch.setenv("NEWSLETTER_TO", "group@example.com")
+    monkeypatch.setenv("GMAIL_USER", "me@example.com"); monkeypatch.setenv("GMAIL_APP_PASSWORD", "abcd efgh\xa0ijkl mnop "); monkeypatch.setenv("NEWSLETTER_TO", "group@example.com")
     common.save("news.json", {"updated": common.now().isoformat()})
     ctx = {"items": [{"title": "T", "source": "s", "url": "u"}], "alerts": [], "flights": [], "areas": [], "site": {"url": ""}}
     assert newsletter.send(ctx, True) == "sent" and sent[0]["To"] == "me@example.com" and sent[0]["Subject"].startswith("[TEST]")
     assert common.load("sent.json", {}) == {}
     assert newsletter.send(ctx) == "sent" and sent[1]["To"] == "group@example.com"
+
+
+def test_bad_login_is_clear_and_not_recorded(monkeypatch, tmp_path):
+    import smtplib
+    class S:
+        def __init__(s, *a, **k): pass
+        def __enter__(s): return s
+        def __exit__(s, *a): pass
+        def login(s, *a): raise smtplib.SMTPServerDisconnected("closed")
+    monkeypatch.setattr(smtplib, "SMTP_SSL", S)
+    monkeypatch.setattr(newsletter, "ROOT", tmp_path)
+    (tmp_path / "site").mkdir(); (tmp_path / "site" / "newsletter.html").write_text("<p>x</p>")
+    monkeypatch.setenv("GMAIL_USER", "me@example.com"); monkeypatch.setenv("NEWSLETTER_TO", "g@example.com")
+    common.save("news.json", {"updated": common.now().isoformat()})
+    ctx = {"items": [{"title": "T", "source": "s", "url": "u"}], "alerts": [], "flights": [], "areas": [], "site": {"url": ""}}
+    monkeypatch.setenv("GMAIL_APP_PASSWORD", "abcdefghijklmnop")
+    assert "refused" in newsletter.send(ctx) and common.load("sent.json", {}) == {}
+    monkeypatch.setenv("GMAIL_APP_PASSWORD", "my normal pass1!")
+    assert "16-letter" in newsletter.send(ctx)
+
+
+def test_underreported_never_green_even_with_shootings():
+    z = zones.score(CFG["areas"], CFG["zones"], {}, 24322, {"copacabana": {"count": 1, "weight": 1}}, {}, datetime.now(timezone.utc))
+    assert {a["id"]: a["computed"] for a in z}["rocinha"] == "unknown"

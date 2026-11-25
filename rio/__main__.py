@@ -39,7 +39,7 @@ def main(a):
     elif cmd == "send":
         res = newsletter.send(build.build(), "--test" in a)
         print(res)
-        if "--test" in a and res != "sent":
+        if res != "sent" and ("--test" in a or "refused" in res or "GMAIL_" in res):
             raise SystemExit(1)
     else:
         raise SystemExit(HELP)

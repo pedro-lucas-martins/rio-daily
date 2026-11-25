@@ -86,10 +86,11 @@ def score(areas, cfg, series, last, shots, log, today):
         lv = level(s, cfg["levels"])
         if r["a"].get("underreported"):   # few reports here do not mean little crime
             lv = "unknown" if shots is None else max(lv, level(parts["shootings"], cfg["levels"]), key=ORDER.index)
+            lv = "unknown" if lv == "green" else lv   # never shown as low
         why = [f"{r['rob']:,} street robberies and {r['the']:,} phone or pocket thefts reported in 12 months",
                f"{abs(r['change']):.0%} {'more' if r['change'] > 0 else 'fewer'} (weighted) in the last 3 months than a year earlier"]
         if r["sh"]:
-            why.append(f"{r['sh']['count']} shootings recorded in 30 days")
+            why.append(f"{r['sh']['count']} shooting{'s' if r['sh']['count'] != 1 else ''} recorded in 30 days")
         why.append(f"{r['events']} crime report{'s' if r['events'] != 1 else ''} in the news in 14 days")
         out.append({"id": r["a"]["id"], "name": r["a"]["name"], "bairros": r["a"]["bairros"], "score": s, "computed": lv,
                     "trend": "up" if r["change"] > .1 else "down" if r["change"] < -.1 else "flat", "why": why, "robbery": r["rob"], "theft": r["the"]})
