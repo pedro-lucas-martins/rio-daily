@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:36:30.632937+00:00",
+ "updated": "2026-11-25T15:38:46.156170+00:00",
  "items": [
   {
    "id": "n8bcae2130",
@@ -99,14 +99,14 @@
    "summary": "",
    "original": "Previsão do Tempo: Rio de Janeiro/RJ tem chuva e trovoadas com máxima de 36°C",
    "source": "Brasil 61",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYk0zN21mRElnODFwX2Y2NFRYc2c4WlV1YVBkelpDZV9WYkRuQU91ODZSTmN5ZWd2Vjh2dFZTQ1E0eXNqWTNTZXpBdlhfUVhBdXYzUGtNTEdZSVBPSE1kYk1HajUtUTR0akVTb3JwTXcyc3NIMF9qYkcxM01IMkZtUGVLSl9QRk5XOVhveDJZWWZId3NSZzVEd1UzWXh5LVJoeGUtcDA0aVRLUV9DeV93dUFCYkfSAbQBQVVfeXFMUGJNMzdtZkRJZzgxcF9mNjRUWHNnOFpVdWFQZHpaQ2VfVmJEbkFPdTg2Uk5jeWVndlY4dnRWU0NRNHlzalkzU2V6QXZYX1FYQXV2M1BrTUxHWUlQT0hNZGJNR2o1LVE0dGpFU29ycE13MnNzSDBfamJHMTNNSDJGbVBlS0pfUEZOVzlYb3gyWVlmSHdzUmc1RHdVM1l4eS1SaHhlLXAwNGlUS1FfQ3lfd3VBQmJH?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPb2JqUVVRX2hOY1h5U1FMRHNhdHIzbHQtVUFmVlFvbjdCU0U0eGk1V3pleFdxYXJJWmhXZ0FuM2RyaGFRN0JodzYzQnFKSzhjTFRNbzFzTzliSmFMZEJhT2RyVV83XzBYblUyUjh4bmlCV2NYWWNIeXZJd2dmOHFCNFlSVWFkZXhlS2h3UzV3TGF1Qnl6YV9NX0pEdUotMFlaWjh2QzMtLS1DdVhzSkVv0gG0AUFVX3lxTFBiTTM3bWZESWc4MXBfZjY0VFhzZzhaVXVhUGR6WkNlX1ZiRG5BT3U4NlJOY3llZ3ZWOHZ0VlNDUTR5c2pZM1NlekF2WF9RWEF1djNQa01MR1lJUE9ITWRiTUdqNS1RNHRqRVNvcnBNdzJzc0gwX2piRzEzTUgyRm1QZUtKX1BGTlc5WG94MllZZkh3c1JnNUR3VTNZeHktUmh4ZS1wMDRpVEtRX0N5X3d1QUJiRw?oc=5",
    "when": "2026-11-25T13:27:26+00:00",
    "tone": "caution",
    "grave": false,
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 2
+   "also": 3
   },
   {
    "id": "n55c7b66c3",
@@ -153,7 +153,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 4
+   "also": 3
   },
   {
    "id": "n8daf4bcfc",
@@ -178,7 +178,7 @@
    "summary": "",
    "original": "Passageiro vindo da Tailândia com conexão em Dubai foi preso ao chegar em voo no Aeroporto do Galeão",
    "source": "AEROIN",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcHNxNWllWTMzVDZDdUhfRnkxeXpsSXprU1BVMnNMTThXS1ZnYmg1OW81M0ZNMjNjSVJMYXc0enQ4LTBIZUFyUmVjRGh1NVZmY1hkN0NWc3NOUnRSSFhWdlhrQjcxUENwYUY4UVpmZFZiaDFpalBUcXpHYU5qSXVBcHROU0xkUndmSkk0ZG9tY2QyMV9BOTdVLVJFRkMtNVRrN0RQWjJ6ZzNTX3pUaXoxQ0dLRXdMTnppVjkwdNIBvAFBVV95cUxOcHNxNWllWTMzVDZDdUhfRnkxeXpsSXprU1BVMnNMTThXS1ZnYmg1OW81M0ZNMjNjSVJMYXc0enQ4LTBIZUFyUmVjRGh1NVZmY1hkN0NWc3NOUnRSSFhWdlhrQjcxUENwYUY4UVpmZFZiaDFpalBUcXpHYU5qSXVBcHROU0xkUndmSkk0ZG9tY2QyMV9BOTdVLVJFRkMtNVRrN0RQWjJ6ZzNTX3pUaXoxQ0dLRXdMTnppVjkwdA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNnIwS1p2eWxqZl9UZHdUb1pVOFQtQ3IwbGh5eXRUT3dyU2MwQ1E4Q0E0RkgzYm9jVzZTRWFyUEcyckdxcHZRdmFKekZsMWV5dEpONXlYelQ0MHd2ZlNxN0xleXNMYjlmZjZfUXZmdGpLQTd1ZzFWS0wwTUpJU3RxOTlRXzBIcms5LTFfRk9fX2dlTHRKaU9UNFNWYVRHNjM3ZjhDUlhQdl9DcGEtVmoyek5MWnh5MFR5dlJYTWRRdy0tLTdw0gHEAUFVX3lxTE82cjBLWnZ5bGpmX1Rkd1RvWlU4VC1DcjBsaHl5dFRPd3JTYzBDUThDQTRGSDNib2NXNlNFYXJQRzJyR3FwdlF2YUp6RmwxZXl0Sk41eVh6VDQwd3ZmU3E3TGV5c0xiOWZmNl9RdmZ0aktBN3VnMVZLTDBNSklTdHE5OVFfMEhyazktMV9GT19fZ2VMdEppT1Q0U1ZhVEc2MzdmOENSWFB2X0NwYS1WajJ6TkxaeHkwVHl2UlhNZFF3LS0tN3A?oc=5",
    "when": "2026-11-25T12:14:55+00:00",
    "tone": "caution",
    "grave": false,
@@ -262,7 +262,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 0
+   "also": 1
   },
   {
    "id": "nc52c152f1",
@@ -423,7 +423,7 @@
    "crime": true,
    "areas": [],
    "translated": true,
-   "also": 18
+   "also": 19
   },
   {
    "id": "n56f3b36eb",

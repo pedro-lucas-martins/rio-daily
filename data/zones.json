@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:36:37.252143+00:00",
+ "updated": "2026-11-25T15:38:53.011021+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
  "shootings_at": "2026-11-25T15:36:37.250610+00:00",
@@ -69,7 +69,7 @@
    ],
    "robbery": 1358,
    "theft": 1441,
-   "previous": "unknown"
+   "previous": "red"
   },
   {
    "id": "flamengo-catete",
@@ -112,7 +112,7 @@
    ],
    "robbery": 553,
    "theft": 4358,
-   "previous": "orange"
+   "previous": "yellow"
   },
   {
    "id": "tijuca",
@@ -153,7 +153,7 @@
    ],
    "robbery": 809,
    "theft": 1677,
-   "previous": "green"
+   "previous": "yellow"
   },
   {
    "id": "recreio",
@@ -175,7 +175,7 @@
    ],
    "robbery": 681,
    "theft": 957,
-   "previous": "green"
+   "previous": "yellow"
   },
   {
    "id": "maracana",
@@ -218,7 +218,7 @@
    ],
    "robbery": 119,
    "theft": 383,
-   "previous": "green"
+   "previous": "yellow"
   },
   {
    "id": "ipanema-leblon",
@@ -280,7 +280,7 @@
    ],
    "robbery": 334,
    "theft": 332,
-   "previous": "yellow"
+   "previous": "green"
   },
   {
    "id": "botafogo-urca",
