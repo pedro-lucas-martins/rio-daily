@@ -2,7 +2,7 @@ import sys
 from . import build, flights, news, newsletter, review, zones
 from .common import load, load_env
 
-HELP = "usage: python -m rio [news|daily|build|demo|pending|approve ID|send]"
+HELP = "usage: python -m rio [news|daily|build|demo|pending|approve ID|send [--test]]"
 
 
 def run(label, fn):
@@ -37,7 +37,10 @@ def main(a):
         review.approve(a[1])
         build.build()
     elif cmd == "send":
-        print(newsletter.send(build.build()))
+        res = newsletter.send(build.build(), "--test" in a)
+        print(res)
+        if "--test" in a and res != "sent":
+            raise SystemExit(1)
     else:
         raise SystemExit(HELP)
 

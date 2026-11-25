@@ -172,3 +172,23 @@ def test_collect_order_budget_and_cursor(monkeypatch):
     assert common.load("flight_budget.json", {})["cursor"] == 2
     flights.collect()     # budget used up: nothing searched, cursor unchanged
     assert len(calls) == 4 and common.load("flight_budget.json", {})["cursor"] == 2
+
+
+def test_test_email_goes_only_to_sender(monkeypatch, tmp_path):
+    import smtplib
+    sent = []
+    class S:
+        def __init__(s, *a, **k): pass
+        def __enter__(s): return s
+        def __exit__(s, *a): pass
+        def login(s, *a): pass
+        def send_message(s, m): sent.append(m)
+    monkeypatch.setattr(smtplib, "SMTP_SSL", S)
+    monkeypatch.setattr(newsletter, "ROOT", tmp_path)
+    (tmp_path / "site").mkdir(); (tmp_path / "site" / "newsletter.html").write_text("<p>x</p>")
+    monkeypatch.setenv("GMAIL_USER", "me@example.com"); monkeypatch.setenv("GMAIL_APP_PASSWORD", "p"); monkeypatch.setenv("NEWSLETTER_TO", "group@example.com")
+    common.save("news.json", {"updated": common.now().isoformat()})
+    ctx = {"items": [{"title": "T", "source": "s", "url": "u"}], "alerts": [], "flights": [], "areas": [], "site": {"url": ""}}
+    assert newsletter.send(ctx, True) == "sent" and sent[0]["To"] == "me@example.com" and sent[0]["Subject"].startswith("[TEST]")
+    assert common.load("sent.json", {}) == {}
+    assert newsletter.send(ctx) == "sent" and sent[1]["To"] == "group@example.com"

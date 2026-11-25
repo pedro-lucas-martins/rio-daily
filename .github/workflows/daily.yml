@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       approve: {description: "ID of a pending item to approve (blank = just update)", required: false, type: string}
+      test_email: {description: "Send a test email to the project Gmail only", required: false, type: boolean, default: false}
 permissions: {contents: read}
 concurrency: {group: rio-daily, cancel-in-progress: false}
 jobs:
@@ -54,7 +55,7 @@ jobs:
         uses: actions/deploy-pages@v5
   newsletter:
     needs: deploy
-    if: github.event.schedule == '0 11 * * *'
+    if: github.event.schedule == '0 11 * * *' || inputs.test_email
     runs-on: ubuntu-latest
     permissions: {contents: write}
     steps:
@@ -68,7 +69,8 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
-        run: python -m rio send
+          TEST: ${{ inputs.test_email && '--test' || '' }}
+        run: python -m rio send $TEST
       - name: Save data
         if: always()
         run: |
