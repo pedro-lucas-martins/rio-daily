@@ -1,6 +1,6 @@
 site:
   name: Rio Daily
-  url: ""            # public address, e.g. https://USER.github.io/rio-daily/
+  url: "https://pedro-lucas-martins.github.io/rio-daily/"
   group_email: ""    # Google Group, e.g. rio-daily@googlegroups.com (blank hides the sign-up)
   contact: ""        # contact shown in the privacy policy
 
