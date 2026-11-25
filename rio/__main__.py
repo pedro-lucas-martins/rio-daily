@@ -28,8 +28,8 @@ def main(a):
     elif cmd == "build":
         build.build()
     elif cmd == "demo":
-        from .demo import history
-        build.build("site-demo", history(), True)
+        from .demo import WATCH, history
+        build.build("site-demo", history(), True, WATCH)
     elif cmd == "pending":
         for p in load("pending.json", []):
             print(p["id"], "|", p["text"], "|", p["original"], p["url"])

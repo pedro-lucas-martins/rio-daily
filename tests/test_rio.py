@@ -128,3 +128,47 @@ def test_env_file(tmp_path, monkeypatch):
     common.load_env(f)
     import os
     assert os.environ["RIO_T_A"] == "real" and os.environ["RIO_T_B"] == "k=1" and "RIO_T_C" not in os.environ
+
+
+def h(origin, dep, price, day, ret="2027-06-15"):
+    return {"origin": origin, "depart": dep, "return": ret, "price": price, "found": f"{day}T11:00:00+00:00", "typical": None}
+
+
+def test_series_never_mixes_trips():
+    from rio.build import watch_view
+    w = [{"origin": "WAW", "depart": "2027-06-01", "return": "2027-06-15"}]
+    hist = [h("WAW", "2027-06-01", 5000, "2026-11-26"), h("WAW", "2026-12-25", 9000, "2026-11-27"), h("KRK", "2027-06-01", 1, "2026-11-27"),
+            h("WAW", "2027-06-01", 5200, "2026-11-29")]
+    v = watch_view(hist, w)[0]
+    assert v["series"] == [("2026-11-26", 5000), ("2026-11-29", 5200)] and v["change"] == 200 and v["prev"][0] == "2026-11-26"
+
+
+def test_drop_uses_same_trip_only():
+    today = common.now()
+    d = lambda n: (today - timedelta(days=n)).date().isoformat()
+    q = dict(h("WAW", "2027-06-01", 4000, d(0)), found=today.isoformat())
+    assert flights.is_drop([h("WAW", "2027-06-01", 5000, d(n)) for n in range(1, 11)], q, .15)
+    assert not flights.is_drop([h("WAW", "2026-12-25", 9000, d(n)) for n in range(1, 11)], q, .15)
+
+
+def test_watch_dates_fixed_then_replaced():
+    from datetime import date
+    c = CFG["flights"]
+    a = flights.watched(c, date(2026, 11, 26))
+    assert flights.watched(c, date(2027, 1, 10)) == a
+    b = flights.watched(c, date(2027, 3, 10))
+    assert b[0]["depart"] == "2027-07-10" and len(b) == 2
+
+
+def test_collect_order_budget_and_cursor(monkeypatch):
+    monkeypatch.setenv("SERPAPI_KEY", "k")
+    calls = []
+    def fake(o, d, r, cfg, budget, key):
+        calls.append((o, d, r)); budget.take(); budget.take()
+        return {"origin": o, "depart": d, "return": r, "price": 1, "found": common.now().isoformat(), "typical": None}
+    monkeypatch.setattr(flights, "quote", fake)
+    flights.collect()
+    assert len(calls) == 4 and [c[0] for c in calls[:2]] == ["WAW", "KRK"]
+    assert common.load("flight_budget.json", {})["cursor"] == 2
+    flights.collect()     # budget used up: nothing searched, cursor unchanged
+    assert len(calls) == 4 and common.load("flight_budget.json", {})["cursor"] == 2

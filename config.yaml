@@ -54,3 +54,6 @@ flights:
   monthly_request_limit: 240   # SerpApi free plan: 250
   requests_per_day: 8          # each verified price costs 2 to 4 requests
   drop_alert: 0.15
+  # Same trip searched every day, so prices are comparable. Replaced when departure is near.
+  watch: [{origin: WAW, months_ahead: 4, stay: 14}, {origin: KRK, months_ahead: 4, stay: 14}]
+  watch_replace_days: 21

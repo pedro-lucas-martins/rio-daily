@@ -42,6 +42,10 @@ class Budget:
         self.s, self.cfg = load("flight_budget.json", {}), cfg
         self.today = now().astimezone(RIO_TZ).date().isoformat()
 
+    def left(self):
+        m, d = self.today[:7], self.today
+        return min(self.cfg["monthly_request_limit"] - self.s.get(m, 0), self.cfg["requests_per_day"] - self.s.get(d, 0)) >= 2
+
     def take(self):
         m, d = self.today[:7], self.today
         if self.s.get(m, 0) >= self.cfg["monthly_request_limit"] or self.s.get(d, 0) >= self.cfg["requests_per_day"]:
@@ -74,14 +78,31 @@ def quote(origin, dep, ret, cfg, budget, key, fetch=None):
     return None
 
 
+def trip(h):
+    return (h["origin"], h["depart"], h["return"])
+
+
 def is_drop(history, q, pct):
-    """Compare only with the same origin and stay, over 60 days; needs 10 samples, else Google's typical range."""
-    stay = lambda h: (date.fromisoformat(h["return"]) - date.fromisoformat(h["depart"])).days
-    past = [h["price"] for h in history if h["origin"] == q["origin"] and stay(h) == stay(q)
+    """Compare only with the very same trip over 60 days; needs 10 samples, else Google's typical range."""
+    past = [h["price"] for h in history if trip(h) == trip(q)
             and h["found"] < q["found"] and h["found"] >= (now() - timedelta(days=60)).isoformat()]
     if len(past) >= 10:
         return q["price"] <= median(past) * (1 - pct) or q["price"] < min(past)
     return bool(q.get("typical")) and q["price"] < q["typical"][0]
+
+
+def watched(cfg, today):
+    """Trips searched every day. Dates stay fixed until departure is near, then a new trip starts."""
+    old = {w["origin"]: w for w in load("watch.json", [])}
+    out = []
+    for c in cfg["watch"]:
+        w = old.get(c["origin"])
+        if not w or (date.fromisoformat(w["depart"]) - today).days < cfg["watch_replace_days"]:
+            d = add_months(today, c["months_ahead"])
+            w = {"origin": c["origin"], "depart": d.isoformat(), "return": (d + timedelta(days=c["stay"])).isoformat()}
+        out.append(w)
+    save("watch.json", out)
+    return out
 
 
 def combos(cfg, today):
@@ -94,20 +115,26 @@ def collect():
     if not key:
         return [], ["Flights: SERPAPI_KEY not set"]
     budget, hist, errors, new = Budget(cfg), load("flights.json", []), [], []
-    todo = combos(cfg, now().astimezone(RIO_TZ).date())
+    today = now().astimezone(RIO_TZ).date()
+    todo = combos(cfg, today)
     cur = budget.s.get("cursor", 0)
-    for _ in range(cfg["requests_per_day"] // 2):
-        o, d, r = todo[cur % len(todo)]
-        cur += 1
-        try:
-            q = quote(o, d, r, cfg, budget, key)
-        except Exception as e:
-            errors.append(f"Flights {o}: {type(e).__name__}")   # never str(e): the URL holds the key
-            break
-        if q:
-            q["drop"] = is_drop(hist, q, cfg["drop_alert"])
-            hist.append(q)
-            new.append(q)
+    jobs = [(trip(w), True) for w in watched(cfg, today)]
+    jobs += [(todo[(cur + n) % len(todo)], False) for n in range(max(cfg["requests_per_day"] // 2 - len(jobs), 0))]
+    have = {trip(h) for h in hist if h["found"][:10] == now().date().isoformat()}
+    for (o, d, r), fixed in jobs:
+        if not budget.left():
+            break      # keep the cursor: this trip is searched next time
+        if (o, d, r) not in have:
+            try:
+                q = quote(o, d, r, cfg, budget, key)
+            except Exception as e:
+                errors.append(f"Flights {o}: {type(e).__name__}")   # never str(e): the URL holds the key
+                break
+            if q:
+                q["drop"] = is_drop(hist, q, cfg["drop_alert"])
+                hist.append(q)
+                new.append(q)
+        cur += not fixed
     budget.s["cursor"] = cur % len(todo)
     save("flight_budget.json", budget.s)
     save("flights.json", [h for h in hist if h["found"] >= (now() - timedelta(days=180)).isoformat()])
