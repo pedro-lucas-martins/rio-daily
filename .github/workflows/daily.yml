@@ -1,0 +1,52 @@
+name: Rio Daily
+on:
+  schedule:
+    - {cron: "0 11 * * *"}      # 08:00 in Rio: everything + newsletter
+    - {cron: "30 1-9/2,13-23/2 * * *"}  # every 2 hours: news and zones
+  workflow_dispatch:
+    inputs:
+      approve: {description: "ID of a pending item to approve (blank = just update)", required: false, type: string}
+permissions: {contents: write, pages: write, id-token: write}
+concurrency: {group: rio-daily, cancel-in-progress: false}
+jobs:
+  run:
+    # Scheduled runs stay off until the repository variable ENABLED is set to true.
+    if: github.event_name == 'workflow_dispatch' || vars.ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: {name: github-pages}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.13", cache: pip}
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with: {path: models, key: translate-pb_en-1_9}
+      - name: Approve
+        if: inputs.approve != ''
+        env: {ITEM: "${{ inputs.approve }}"}
+        run: python -m rio approve "$ITEM"
+      - name: Collect and build
+        env:
+          MODE: ${{ github.event.schedule == '0 11 * * *' && 'daily' || 'news' }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          FOGOCRUZADO_EMAIL: ${{ secrets.FOGOCRUZADO_EMAIL }}
+          FOGOCRUZADO_PASSWORD: ${{ secrets.FOGOCRUZADO_PASSWORD }}
+        run: python -m rio "$MODE" && python -m rio pending
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: site}
+      - uses: actions/deploy-pages@v4
+      - name: Newsletter
+        if: github.event.schedule == '0 11 * * *'
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
+        run: python -m rio send
+      - name: Save data
+        if: always()
+        run: |
+          git config user.name "rio-daily-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Update data"
+          git pull --rebase && git push

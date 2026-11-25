@@ -1,0 +1,56 @@
+site:
+  name: Rio Daily
+  url: ""            # public address, e.g. https://USER.github.io/rio-daily/
+  group_email: ""    # Google Group, e.g. rio-daily@googlegroups.com (blank hides the sign-up)
+  contact: ""        # contact shown in the privacy policy
+
+news:
+  max_age_days: 3
+  max_per_tone: 12
+  feeds:
+    - {name: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml", must_mention_rio: true}
+    - {name: The Rio Times, url: "https://www.riotimesonline.com/feed/", lang: en, must_mention_rio: true}
+  google_queries:
+    - '"Rio de Janeiro" turista'
+    - '"Rio de Janeiro" praia OR balneabilidade'
+    - 'Copacabana OR Ipanema OR Leblon assalto OR arrastão OR furto'
+    - 'Lapa OR "Santa Teresa" Rio de Janeiro crime OR show'
+    - '"Rio de Janeiro" metrô OR VLT OR Galeão OR greve'
+    - '"Rio de Janeiro" tiroteio OR operação policial'
+    - '"Rio de Janeiro" temporal OR previsão OR alerta'
+    - '"Rio de Janeiro" festival OR exposição OR museu OR réveillon OR carnaval'
+  blocked_sources: [instagram, facebook, tiktok, youtube, x.com, reddit]
+
+# bairros = official names in data/bairros.geojson; cisps = police precinct areas
+areas:
+  - {id: copacabana, name: Copacabana & Leme, cisps: [12, 13], bairros: [Copacabana, Leme]}
+  - {id: ipanema-leblon, name: Ipanema & Leblon, cisps: [14], bairros: [Ipanema, Leblon]}
+  - {id: botafogo-urca, name: Botafogo & Urca, cisps: [10], bairros: [Botafogo, Urca, Humaitá], aliases: [Pão de Açúcar]}
+  - {id: flamengo-catete, name: "Flamengo, Catete & Glória", cisps: [9], bairros: [Flamengo, Catete, Glória, Laranjeiras, Cosme Velho], aliases: [Aterro]}
+  - {id: lagoa-gavea, name: "Lagoa, Gávea & São Conrado", cisps: [15], bairros: [Lagoa, Gávea, Jardim Botânico, São Conrado, Vidigal]}
+  - {id: rocinha, name: Rocinha, cisps: [11], bairros: [Rocinha], underreported: true}
+  - {id: santa-teresa, name: Santa Teresa, cisps: [7], bairros: [Santa Teresa]}
+  - {id: centro-lapa, name: "Centro, Lapa & Port", cisps: [1, 4, 5], bairros: [Centro, Lapa, Saúde, Gamboa, Santo Cristo], aliases: [Praça Mauá, Porto Maravilha, Boulevard Olímpico]}
+  - {id: maracana, name: Maracanã & Praça da Bandeira, cisps: [18], bairros: [Maracanã, Praça da Bandeira]}
+  - {id: tijuca, name: Tijuca, cisps: [19], bairros: [Tijuca, Alto da Boa Vista]}
+  - {id: sao-cristovao, name: São Cristóvão, cisps: [17], bairros: [Imperial de São Cristóvão, Vasco da Gama, Caju], aliases: [São Cristóvão]}
+  - {id: airport-road, name: "Airport route (Maré, Bonsucesso)", cisps: [21], bairros: [Maré, Bonsucesso, Manguinhos, Ramos], aliases: [Linha Vermelha, Linha Amarela], underreported: true}
+  - {id: galeao, name: Galeão & Ilha do Governador, cisps: [37], bairros: [Galeão, Jardim Guanabara, Cocotá, Portuguesa, Tauá], aliases: [Ilha do Governador]}
+  - {id: barra, name: Barra da Tijuca, cisps: [16], bairros: [Barra da Tijuca, Joá, Itanhangá, Barra Olímpica]}
+  - {id: recreio, name: Recreio, cisps: [42], bairros: [Recreio dos Bandeirantes, Vargem Grande, Vargem Pequena, Grumari]}
+
+zones:
+  weights: {official: 0.50, shootings: 0.25, news: 0.25}
+  theft_weight: 0.3        # pickpocketing/phone theft counts less than robbery
+  own_trend_share: 0.3     # part of the official score from the area's own trend
+  levels: {yellow: 25, orange: 50, red: 75}
+
+flights:
+  origins: [WAW, KRK]
+  destination: GIG
+  excluded_airports: [GRU, CGH, VCP]
+  stays: [7, 14, 21]
+  months_ahead: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  monthly_request_limit: 240   # SerpApi free plan: 250
+  requests_per_day: 8          # each verified price costs 2 to 4 requests
+  drop_alert: 0.15

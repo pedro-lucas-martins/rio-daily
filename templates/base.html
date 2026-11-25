@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ site.name }}</title><meta name="description" content="Rio de Janeiro for visitors: news in English, hot zones and flights from Poland">
+<meta property="og:title" content="{{ site.name }}"><meta property="og:description" content="News in English, hot zones and flights from Poland">
+<link rel="stylesheet" href="static/style.css">{% block head %}{% endblock %}</head><body>
+{% if demo %}<div class="demo">SAMPLE DATA: the flight prices on this preview are invented</div>{% endif %}
+<header><a class="brand" href="index.html">{{ site.name }}</a><nav>
+{% for id, label in [('index','Today'),('news','News'),('zones','Hot zones'),('flights','Flights'),('about','About')] %}<a href="{{ id }}.html"{% if page == id %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
+</nav></header><main>{% block main %}{% endblock %}</main>
+<footer><p><a class="btn" href="{{ share }}" target="_blank" rel="noopener">Share on WhatsApp</a>{% if join %} <a class="btn alt" href="{{ join }}">Get the daily email</a>{% endif %}</p>
+<p>Updated {{ updated }} (Rio time). Emergency: police 190, ambulance 192, fire 193.{% if stale %} Some sources were unavailable today.{% endif %}</p></footer></body></html>

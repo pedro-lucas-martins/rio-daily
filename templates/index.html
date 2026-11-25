@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% from "_card.html" import card with context %}{% block main %}<h1>Rio today</h1><p class="sub">{{ date }}</p>
+{% for a in alerts %}<div class="alert"><b>Alert:</b> <a href="{{ a.url }}">{{ a.title }}</a> <small>({{ a.source }})</small></div>{% endfor %}
+<h2>News</h2><div class="grid">{% for t in ['bad','caution','good'] %}{% for i in (items|selectattr('tone','equalto',t)|list)[:3] %}{{ card(i) }}{% endfor %}{% endfor %}</div>{% if not items %}<p>No news available right now.</p>{% endif %}
+<h2>Hot zones</h2><ul class="chips">{% for a in areas[:6] %}<li><a class="lv {{ a.level }}" href="zones.html#{{ a.id }}">{{ a.name }}: {{ a.label }}</a></li>{% endfor %}</ul><p><a href="zones.html">Open the map</a></p>
+<h2>Flights from Poland</h2>{% if flights %}<p class="price">{{ flights[0].price|pln }}</p><p>{{ flights[0].out|join(' → ') }}, {{ flights[0].depart }} to {{ flights[0].return }}. <a href="flights.html">All prices</a></p>{% else %}<p>No verified prices yet.</p>{% endif %}{% endblock %}

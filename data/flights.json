@@ -1,0 +1,96 @@
+[
+ {
+  "origin": "WAW",
+  "depart": "2027-01-25",
+  "return": "2027-02-01",
+  "price": 4565,
+  "out": [
+   "WAW",
+   "CDG",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "AMS",
+   "WAW"
+  ],
+  "airlines": [
+   "Air France",
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-25T13:15:24.176250+00:00",
+  "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2026-12-25",
+  "return": "2027-01-01",
+  "price": 7624,
+  "out": [
+   "WAW",
+   "CDG",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "AMS",
+   "WAW"
+  ],
+  "airlines": [
+   "Air France",
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-25T13:16:27.673103+00:00",
+  "drop": false
+ },
+ {
+  "origin": "KRK",
+  "depart": "2026-12-25",
+  "return": "2027-01-01",
+  "price": 7960,
+  "out": [
+   "KRK",
+   "AMS",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "AMS",
+   "KRK"
+  ],
+  "airlines": [
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-25T13:16:42.026253+00:00",
+  "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2026-12-25",
+  "return": "2027-01-08",
+  "price": 8576,
+  "out": [
+   "WAW",
+   "CDG",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "CDG",
+   "WAW"
+  ],
+  "airlines": [
+   "Air France"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-25T13:17:00.135831+00:00",
+  "drop": false
+ }
+]
