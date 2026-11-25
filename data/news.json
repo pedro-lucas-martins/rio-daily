@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:29:57.365276+00:00",
+ "updated": "2026-11-25T15:36:30.632937+00:00",
  "items": [
   {
    "id": "n8bcae2130",
@@ -99,7 +99,7 @@
    "summary": "",
    "original": "Previsão do Tempo: Rio de Janeiro/RJ tem chuva e trovoadas com máxima de 36°C",
    "source": "Brasil 61",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPb2JqUVVRX2hOY1h5U1FMRHNhdHIzbHQtVUFmVlFvbjdCU0U0eGk1V3pleFdxYXJJWmhXZ0FuM2RyaGFRN0JodzYzQnFKSzhjTFRNbzFzTzliSmFMZEJhT2RyVV83XzBYblUyUjh4bmlCV2NYWWNIeXZJd2dmOHFCNFlSVWFkZXhlS2h3UzV3TGF1Qnl6YV9NX0pEdUotMFlaWjh2QzMtLS1DdVhzSkVv0gG0AUFVX3lxTFBiTTM3bWZESWc4MXBfZjY0VFhzZzhaVXVhUGR6WkNlX1ZiRG5BT3U4NlJOY3llZ3ZWOHZ0VlNDUTR5c2pZM1NlekF2WF9RWEF1djNQa01MR1lJUE9ITWRiTUdqNS1RNHRqRVNvcnBNdzJzc0gwX2piRzEzTUgyRm1QZUtKX1BGTlc5WG94MllZZkh3c1JnNUR3VTNZeHktUmh4ZS1wMDRpVEtRX0N5X3d1QUJiRw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYk0zN21mRElnODFwX2Y2NFRYc2c4WlV1YVBkelpDZV9WYkRuQU91ODZSTmN5ZWd2Vjh2dFZTQ1E0eXNqWTNTZXpBdlhfUVhBdXYzUGtNTEdZSVBPSE1kYk1HajUtUTR0akVTb3JwTXcyc3NIMF9qYkcxM01IMkZtUGVLSl9QRk5XOVhveDJZWWZId3NSZzVEd1UzWXh5LVJoeGUtcDA0aVRLUV9DeV93dUFCYkfSAbQBQVVfeXFMUGJNMzdtZkRJZzgxcF9mNjRUWHNnOFpVdWFQZHpaQ2VfVmJEbkFPdTg2Uk5jeWVndlY4dnRWU0NRNHlzalkzU2V6QXZYX1FYQXV2M1BrTUxHWUlQT0hNZGJNR2o1LVE0dGpFU29ycE13MnNzSDBfamJHMTNNSDJGbVBlS0pfUEZOVzlYb3gyWVlmSHdzUmc1RHdVM1l4eS1SaHhlLXAwNGlUS1FfQ3lfd3VBQmJH?oc=5",
    "when": "2026-11-25T13:27:26+00:00",
    "tone": "caution",
    "grave": false,
@@ -173,6 +173,23 @@
    "also": 1
   },
   {
+   "id": "n59ea33483",
+   "title": "Passenger coming from Thailand with connection to Dubai was arrested when arriving in flight at Galeão (Rio's international airport) Airport",
+   "summary": "",
+   "original": "Passageiro vindo da Tailândia com conexão em Dubai foi preso ao chegar em voo no Aeroporto do Galeão",
+   "source": "AEROIN",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcHNxNWllWTMzVDZDdUhfRnkxeXpsSXprU1BVMnNMTThXS1ZnYmg1OW81M0ZNMjNjSVJMYXc0enQ4LTBIZUFyUmVjRGh1NVZmY1hkN0NWc3NOUnRSSFhWdlhrQjcxUENwYUY4UVpmZFZiaDFpalBUcXpHYU5qSXVBcHROU0xkUndmSkk0ZG9tY2QyMV9BOTdVLVJFRkMtNVRrN0RQWjJ6ZzNTX3pUaXoxQ0dLRXdMTnppVjkwdNIBvAFBVV95cUxOcHNxNWllWTMzVDZDdUhfRnkxeXpsSXprU1BVMnNMTThXS1ZnYmg1OW81M0ZNMjNjSVJMYXc0enQ4LTBIZUFyUmVjRGh1NVZmY1hkN0NWc3NOUnRSSFhWdlhrQjcxUENwYUY4UVpmZFZiaDFpalBUcXpHYU5qSXVBcHROU0xkUndmSkk0ZG9tY2QyMV9BOTdVLVJFRkMtNVRrN0RQWjJ6ZzNTX3pUaXoxQ0dLRXdMTnppVjkwdA?oc=5",
+   "when": "2026-11-25T12:14:55+00:00",
+   "tone": "caution",
+   "grave": false,
+   "crime": false,
+   "areas": [
+    "galeao"
+   ],
+   "translated": true,
+   "also": 0
+  },
+  {
    "id": "n259eaf7b6",
    "title": "RJ goes on alert for storms with winds of up to 80 km/h and intense rain",
    "summary": "",
@@ -200,7 +217,7 @@
    "crime": false,
    "areas": [],
    "translated": true,
-   "also": 2
+   "also": 1
   },
   {
    "id": "nb9a8e57ef",
@@ -314,21 +331,6 @@
    "also": 0
   },
   {
-   "id": "nc971c6c61",
-   "title": "State the Rio subway, which failed for the second day in a row",
-   "summary": "",
-   "original": "Estatizar o metrô do Rio, que falhou pelo segundo dia seguido",
-   "source": "Diário Causa Operária",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdkJJSU5vRW4zWUNBREprMUFTSHpfMGJUZkt1cC1Jd1hsSC10SXV6cnQtNUVQVXZFZVA3YWkwRmxlNE5TeVdObVRHQ0o1WncyMEt2QUtuODMwZUs0N09KajZxbGlkUGJ1eVlhaGliU2kzUGc0M0pyNllrcEFxY2ZuQ05KS0dfWTdhUnlmQ0YyamVEamZDVzVid0laYw?oc=5",
-   "when": "2026-11-25T03:00:23+00:00",
-   "tone": "caution",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 3
-  },
-  {
    "id": "n8678942d7",
    "title": "81-year-old is assaulted during attempted assault in Santa Teresa",
    "summary": "",
@@ -409,21 +411,6 @@
    "also": 1
   },
   {
-   "id": "n2cae78b3e",
-   "title": "Accident in Central do Brasil closes Rio subway station and affects Lines 1, 2 and 4 after smoke",
-   "summary": "",
-   "original": "Acidente na Central do Brasil fecha estação do metrô do Rio e afeta Linhas 1, 2 e 4 após fumaça",
-   "source": "Mix Vale",
-   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQenZaNm9OY0xCVlpRSmZrbVV6TEFRUTJiakRnb01XbzBfMmlTdUQtZktLWDBvRlNPcm1CY1JtUnRBRUstZ0N0MUNLTHFyTURWTGpUbTZLSlBaaFgyQ1J1S2dzQVVyc3hPUzNTV1VCd1pyYVZaT2ZBWkZRTDFZYWgwS3JhQ3dyVXJyWGlCVDdyTFFGOWNQS241TU9aNGVNVm5OQW5MWEc0bVVhbW15UnNQUUxZd3RWTXNHVU1RM3I1OFY4TEhiQmtvakFvQTI3QQ?oc=5",
-   "when": "2026-11-23T17:11:57+00:00",
-   "tone": "bad",
-   "grave": false,
-   "crime": false,
-   "areas": [],
-   "translated": true,
-   "also": 5
-  },
-  {
    "id": "nec3cce573",
    "title": "American tourist shot dead in Rio had announced trip on social networks",
    "summary": "",
@@ -436,7 +423,7 @@
    "crime": true,
    "areas": [],
    "translated": true,
-   "also": 19
+   "also": 18
   },
   {
    "id": "n56f3b36eb",

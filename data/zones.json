@@ -1,29 +1,9 @@
 {
- "updated": "2026-11-25T15:30:04.116203+00:00",
+ "updated": "2026-11-25T15:36:37.252143+00:00",
  "official_until": "2026-10",
- "has_shootings": false,
+ "has_shootings": true,
+ "shootings_at": "2026-11-25T15:36:37.250610+00:00",
  "areas": [
-  {
-   "id": "barra",
-   "name": "Barra da Tijuca",
-   "bairros": [
-    "Barra da Tijuca",
-    "Joá",
-    "Itanhangá",
-    "Barra Olímpica"
-   ],
-   "score": 63,
-   "computed": "orange",
-   "trend": "up",
-   "why": [
-    "1,250 street robberies and 3,566 phone or pocket thefts reported in 12 months",
-    "48% more (weighted) in the last 3 months than a year earlier",
-    "0 crime reports in the news in 14 days"
-   ],
-   "robbery": 1250,
-   "theft": 3566,
-   "previous": "orange"
-  },
   {
    "id": "centro-lapa",
    "name": "Centro, Lapa & Port",
@@ -34,12 +14,13 @@
     "Gamboa",
     "Santo Cristo"
    ],
-   "score": 62,
+   "score": 61,
    "computed": "orange",
    "trend": "flat",
    "why": [
     "3,756 street robberies and 9,294 phone or pocket thefts reported in 12 months",
     "2% fewer (weighted) in the last 3 months than a year earlier",
+    "1 shooting recorded in 30 days",
     "1 crime report in the news in 14 days"
    ],
    "robbery": 3756,
@@ -47,42 +28,26 @@
    "previous": "orange"
   },
   {
-   "id": "copacabana",
-   "name": "Copacabana & Leme",
+   "id": "barra",
+   "name": "Barra da Tijuca",
    "bairros": [
-    "Copacabana",
-    "Leme"
+    "Barra da Tijuca",
+    "Joá",
+    "Itanhangá",
+    "Barra Olímpica"
    ],
-   "score": 56,
+   "score": 60,
    "computed": "orange",
    "trend": "up",
    "why": [
-    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
-    "17% more (weighted) in the last 3 months than a year earlier",
-    "1 crime report in the news in 14 days"
-   ],
-   "robbery": 553,
-   "theft": 4358,
-   "previous": "yellow"
-  },
-  {
-   "id": "maracana",
-   "name": "Maracanã & Praça da Bandeira",
-   "bairros": [
-    "Maracanã",
-    "Praça da Bandeira"
-   ],
-   "score": 45,
-   "computed": "yellow",
-   "trend": "down",
-   "why": [
-    "1,404 street robberies and 2,844 phone or pocket thefts reported in 12 months",
-    "27% fewer (weighted) in the last 3 months than a year earlier",
+    "1,250 street robberies and 3,566 phone or pocket thefts reported in 12 months",
+    "48% more (weighted) in the last 3 months than a year earlier",
+    "1 shooting recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
-   "robbery": 1404,
-   "theft": 2844,
-   "previous": "yellow"
+   "robbery": 1250,
+   "theft": 3566,
+   "previous": "orange"
   },
   {
    "id": "airport-road",
@@ -93,17 +58,18 @@
     "Manguinhos",
     "Ramos"
    ],
-   "score": 41,
-   "computed": "unknown",
+   "score": 56,
+   "computed": "red",
    "trend": "flat",
    "why": [
     "1,358 street robberies and 1,441 phone or pocket thefts reported in 12 months",
     "9% fewer (weighted) in the last 3 months than a year earlier",
+    "18 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 1358,
    "theft": 1441,
-   "previous": "red"
+   "previous": "unknown"
   },
   {
    "id": "flamengo-catete",
@@ -115,12 +81,13 @@
     "Laranjeiras",
     "Cosme Velho"
    ],
-   "score": 35,
+   "score": 46,
    "computed": "yellow",
    "trend": "down",
    "why": [
     "975 street robberies and 2,450 phone or pocket thefts reported in 12 months",
     "23% fewer (weighted) in the last 3 months than a year earlier",
+    "3 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 975,
@@ -128,23 +95,24 @@
    "previous": "yellow"
   },
   {
-   "id": "ipanema-leblon",
-   "name": "Ipanema & Leblon",
+   "id": "copacabana",
+   "name": "Copacabana & Leme",
    "bairros": [
-    "Ipanema",
-    "Leblon"
+    "Copacabana",
+    "Leme"
    ],
-   "score": 33,
+   "score": 42,
    "computed": "yellow",
-   "trend": "down",
+   "trend": "up",
    "why": [
-    "616 street robberies and 3,245 phone or pocket thefts reported in 12 months",
-    "17% fewer (weighted) in the last 3 months than a year earlier",
-    "0 crime reports in the news in 14 days"
+    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
+    "17% more (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "1 crime report in the news in 14 days"
    ],
-   "robbery": 616,
-   "theft": 3245,
-   "previous": "yellow"
+   "robbery": 553,
+   "theft": 4358,
+   "previous": "orange"
   },
   {
    "id": "tijuca",
@@ -153,35 +121,18 @@
     "Tijuca",
     "Alto da Boa Vista"
    ],
-   "score": 30,
+   "score": 38,
    "computed": "yellow",
    "trend": "down",
    "why": [
     "1,029 street robberies and 1,423 phone or pocket thefts reported in 12 months",
     "18% fewer (weighted) in the last 3 months than a year earlier",
+    "2 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 1029,
    "theft": 1423,
    "previous": "yellow"
-  },
-  {
-   "id": "santa-teresa",
-   "name": "Santa Teresa",
-   "bairros": [
-    "Santa Teresa"
-   ],
-   "score": 26,
-   "computed": "yellow",
-   "trend": "down",
-   "why": [
-    "334 street robberies and 332 phone or pocket thefts reported in 12 months",
-    "19% fewer (weighted) in the last 3 months than a year earlier",
-    "2 crime reports in the news in 14 days"
-   ],
-   "robbery": 334,
-   "theft": 332,
-   "previous": "green"
   },
   {
    "id": "sao-cristovao",
@@ -191,17 +142,18 @@
     "Vasco da Gama",
     "Caju"
    ],
-   "score": 22,
-   "computed": "green",
+   "score": 38,
+   "computed": "yellow",
    "trend": "down",
    "why": [
     "809 street robberies and 1,677 phone or pocket thefts reported in 12 months",
     "42% fewer (weighted) in the last 3 months than a year earlier",
+    "3 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 809,
    "theft": 1677,
-   "previous": "yellow"
+   "previous": "green"
   },
   {
    "id": "recreio",
@@ -212,77 +164,38 @@
     "Vargem Pequena",
     "Grumari"
    ],
-   "score": 20,
-   "computed": "green",
+   "score": 38,
+   "computed": "yellow",
    "trend": "down",
    "why": [
     "681 street robberies and 957 phone or pocket thefts reported in 12 months",
     "19% fewer (weighted) in the last 3 months than a year earlier",
+    "6 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 681,
    "theft": 957,
+   "previous": "green"
+  },
+  {
+   "id": "maracana",
+   "name": "Maracanã & Praça da Bandeira",
+   "bairros": [
+    "Maracanã",
+    "Praça da Bandeira"
+   ],
+   "score": 33,
+   "computed": "yellow",
+   "trend": "down",
+   "why": [
+    "1,404 street robberies and 2,844 phone or pocket thefts reported in 12 months",
+    "27% fewer (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "0 crime reports in the news in 14 days"
+   ],
+   "robbery": 1404,
+   "theft": 2844,
    "previous": "yellow"
-  },
-  {
-   "id": "botafogo-urca",
-   "name": "Botafogo & Urca",
-   "bairros": [
-    "Botafogo",
-    "Urca",
-    "Humaitá"
-   ],
-   "score": 18,
-   "computed": "green",
-   "trend": "down",
-   "why": [
-    "534 street robberies and 1,509 phone or pocket thefts reported in 12 months",
-    "42% fewer (weighted) in the last 3 months than a year earlier",
-    "0 crime reports in the news in 14 days"
-   ],
-   "robbery": 534,
-   "theft": 1509,
-   "previous": "green"
-  },
-  {
-   "id": "lagoa-gavea",
-   "name": "Lagoa, Gávea & São Conrado",
-   "bairros": [
-    "Lagoa",
-    "Gávea",
-    "Jardim Botânico",
-    "São Conrado",
-    "Vidigal"
-   ],
-   "score": 14,
-   "computed": "green",
-   "trend": "down",
-   "why": [
-    "303 street robberies and 993 phone or pocket thefts reported in 12 months",
-    "29% fewer (weighted) in the last 3 months than a year earlier",
-    "0 crime reports in the news in 14 days"
-   ],
-   "robbery": 303,
-   "theft": 993,
-   "previous": "green"
-  },
-  {
-   "id": "rocinha",
-   "name": "Rocinha",
-   "bairros": [
-    "Rocinha"
-   ],
-   "score": 13,
-   "computed": "unknown",
-   "trend": "up",
-   "why": [
-    "7 street robberies and 65 phone or pocket thefts reported in 12 months",
-    "13% more (weighted) in the last 3 months than a year earlier",
-    "0 crime reports in the news in 14 days"
-   ],
-   "robbery": 7,
-   "theft": 65,
-   "previous": "unknown"
   },
   {
    "id": "galeao",
@@ -294,20 +207,121 @@
     "Portuguesa",
     "Tauá"
    ],
-   "score": 11,
-   "computed": "green",
+   "score": 26,
+   "computed": "yellow",
    "trend": "down",
    "why": [
     "119 street robberies and 383 phone or pocket thefts reported in 12 months",
     "13% fewer (weighted) in the last 3 months than a year earlier",
+    "2 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 119,
    "theft": 383,
+   "previous": "green"
+  },
+  {
+   "id": "ipanema-leblon",
+   "name": "Ipanema & Leblon",
+   "bairros": [
+    "Ipanema",
+    "Leblon"
+   ],
+   "score": 25,
+   "computed": "yellow",
+   "trend": "down",
+   "why": [
+    "616 street robberies and 3,245 phone or pocket thefts reported in 12 months",
+    "17% fewer (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "0 crime reports in the news in 14 days"
+   ],
+   "robbery": 616,
+   "theft": 3245,
    "previous": "yellow"
+  },
+  {
+   "id": "lagoa-gavea",
+   "name": "Lagoa, Gávea & São Conrado",
+   "bairros": [
+    "Lagoa",
+    "Gávea",
+    "Jardim Botânico",
+    "São Conrado",
+    "Vidigal"
+   ],
+   "score": 21,
+   "computed": "green",
+   "trend": "down",
+   "why": [
+    "303 street robberies and 993 phone or pocket thefts reported in 12 months",
+    "29% fewer (weighted) in the last 3 months than a year earlier",
+    "1 shooting recorded in 30 days",
+    "0 crime reports in the news in 14 days"
+   ],
+   "robbery": 303,
+   "theft": 993,
+   "previous": "green"
+  },
+  {
+   "id": "santa-teresa",
+   "name": "Santa Teresa",
+   "bairros": [
+    "Santa Teresa"
+   ],
+   "score": 20,
+   "computed": "green",
+   "trend": "down",
+   "why": [
+    "334 street robberies and 332 phone or pocket thefts reported in 12 months",
+    "19% fewer (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "2 crime reports in the news in 14 days"
+   ],
+   "robbery": 334,
+   "theft": 332,
+   "previous": "yellow"
+  },
+  {
+   "id": "botafogo-urca",
+   "name": "Botafogo & Urca",
+   "bairros": [
+    "Botafogo",
+    "Urca",
+    "Humaitá"
+   ],
+   "score": 14,
+   "computed": "green",
+   "trend": "down",
+   "why": [
+    "534 street robberies and 1,509 phone or pocket thefts reported in 12 months",
+    "42% fewer (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "0 crime reports in the news in 14 days"
+   ],
+   "robbery": 534,
+   "theft": 1509,
+   "previous": "green"
+  },
+  {
+   "id": "rocinha",
+   "name": "Rocinha",
+   "bairros": [
+    "Rocinha"
+   ],
+   "score": 9,
+   "computed": "unknown",
+   "trend": "up",
+   "why": [
+    "7 street robberies and 65 phone or pocket thefts reported in 12 months",
+    "13% more (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "0 crime reports in the news in 14 days"
+   ],
+   "robbery": 7,
+   "theft": 65,
+   "previous": "unknown"
   }
  ],
- "errors": [
-  "Fogo Cruzado: HTTPError"
- ]
+ "errors": []
 }
