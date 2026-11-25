@@ -239,3 +239,29 @@ def test_landing_pages(tmp_path, monkeypatch):
     build.build()
     html = (tmp_path / "site" / "index.html").read_text()
     assert "&lt;script&gt;x" in html and "held" not in html
+
+
+def test_shootings_fall_back_to_last_copy(monkeypatch):
+    import requests
+    calls = []
+    def boom():
+        calls.append(1)
+        r = requests.Response(); r.status_code = 429
+        raise requests.HTTPError(response=r)
+    monkeypatch.setattr(zones, "shootings", boom)
+    monkeypatch.setattr(zones.time, "sleep", lambda s: None)
+    ago = lambda h: (common.now() - timedelta(hours=h)).isoformat()
+    common.save("shootings.json", {"at": ago(1), "data": {"mare": {"count": 1, "weight": 1}}})
+    assert zones.fresh_shootings()[0]["mare"]["count"] == 1 and calls == []
+    common.save("shootings.json", {"at": ago(10), "data": {"mare": {"count": 2, "weight": 1}}})
+    assert zones.fresh_shootings()[0]["mare"]["count"] == 2 and len(calls) == 3
+    common.save("shootings.json", {"at": ago(80), "data": {}})
+    with pytest.raises(requests.HTTPError):
+        zones.fresh_shootings()
+
+
+def test_missing_data_keeps_zone_approval():
+    common.save("approvals.json", ["z-a"])
+    z = {"id": "a", "name": "A", "score": 50, "computed": "unknown"}
+    review.apply([], [z]); assert common.load("approvals.json", []) == ["z-a"]
+    review.apply([], [dict(z, computed="yellow")]); assert common.load("approvals.json", []) == []

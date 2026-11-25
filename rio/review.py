@@ -20,8 +20,8 @@ def apply(news, zones):
             lv, held = "orange", True
         else:
             held = False
-        if lv != "red":
-            ok.discard(zid) if not held else None    # a new rise needs a new approval
+        if lv not in ("red", "unknown") and not held:   # missing data does not cancel an approval
+            ok.discard(zid)    # a new rise needs a new approval
         areas.append(dict(z, level=lv, held=held, was=shown.get(z["id"])))
     save("approvals.json", sorted(ok))
     save("pending.json", pending)

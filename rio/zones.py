@@ -1,5 +1,5 @@
 """Hot-zone score: ISP precinct statistics + Fogo Cruzado shootings + news."""
-import csv, io, os
+import csv, io, os, time
 from datetime import datetime, timedelta
 from .common import config, get, load, norm, now, save
 import requests
@@ -44,6 +44,34 @@ def shootings():
             s["weight"] += 0.5 ** (max(age, 0) / 10)
         page += 1
     return out
+
+
+def status(e):
+    return getattr(getattr(e, "response", None), "status_code", "")
+
+
+def fresh_shootings(attempts=3):
+    """Live data when older than 6 hours; on failure, the last copy for up to 3 days. A failed source must not lower an area."""
+    old = load("shootings.json", {})
+    age = (now() - datetime.fromisoformat(old["at"])).total_seconds() / 3600 if old else 1e9
+    if age < 6:
+        return old["data"], old["at"]
+    for n in range(attempts):
+        try:
+            data = shootings()
+            if data is None:
+                return None, None
+            at = now().isoformat()
+            save("shootings.json", {"at": at, "data": data})
+            return data, at
+        except Exception as e:
+            if n < attempts - 1 and (status(e) == 429 or str(status(e)).startswith("5")):
+                time.sleep(20 * (n + 1))
+                continue
+            if age < 72:
+                print(f"Fogo Cruzado failed ({status(e) or type(e).__name__}), using the copy from {old['at']}")
+                return old["data"], old["at"]
+            raise
 
 
 def percentile(values, v):
@@ -101,13 +129,13 @@ def collect():
     c, errors = config(), []
     series, last = isp_series()
     try:
-        shots = shootings()
+        shots, when = fresh_shootings()
     except Exception as e:
-        shots = None
-        errors.append(f"Fogo Cruzado: {type(e).__name__}")
+        shots, when = None, None
+        errors.append(f"Fogo Cruzado: {type(e).__name__} {status(e)}".strip())
     z = score(c["areas"], c["zones"], series, last, shots, load("crime_log.json", {}), now())
     prev = {x["id"]: x["computed"] for x in load("zones.json", {}).get("areas", [])}
     for a in z:
         a["previous"] = prev.get(a["id"])
-    save("zones.json", {"updated": now().isoformat(), "official_until": f"{last // 12}-{last % 12 + 1:02d}", "has_shootings": shots is not None, "areas": z, "errors": errors})
+    save("zones.json", {"updated": now().isoformat(), "official_until": f"{last // 12}-{last % 12 + 1:02d}", "has_shootings": shots is not None, "shootings_at": when, "areas": z, "errors": errors})
     return z, errors
