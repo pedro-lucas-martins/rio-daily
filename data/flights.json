@@ -92,5 +92,77 @@
   "direct": false,
   "found": "2026-11-25T13:17:00.135831+00:00",
   "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2027-03-26",
+  "return": "2027-04-09",
+  "price": 5073,
+  "out": [
+   "WAW",
+   "LIS",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "LIS",
+   "WAW"
+  ],
+  "airlines": [
+   "Tap Air Portugal"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-26T19:59:22.710415+00:00",
+  "drop": false
+ },
+ {
+  "origin": "KRK",
+  "depart": "2027-03-26",
+  "return": "2027-04-09",
+  "price": 4634,
+  "out": [
+   "KRK",
+   "AMS",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "FOR",
+   "CDG",
+   "KRK"
+  ],
+  "airlines": [
+   "Air France",
+   "Gol",
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-26T19:59:36.238631+00:00",
+  "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2026-12-26",
+  "return": "2027-01-16",
+  "price": 7716,
+  "out": [
+   "WAW",
+   "AMS",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "AMS",
+   "WAW"
+  ],
+  "airlines": [
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-26T19:59:43.541009+00:00",
+  "drop": false
  }
 ]
