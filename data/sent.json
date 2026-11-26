@@ -1,0 +1,20 @@
+{
+ "last": "2026-11-26",
+ "levels": {
+  "airport-road": "red",
+  "centro-lapa": "orange",
+  "barra": "orange",
+  "flamengo-catete": "yellow",
+  "copacabana": "yellow",
+  "tijuca": "yellow",
+  "sao-cristovao": "yellow",
+  "recreio": "yellow",
+  "maracana": "yellow",
+  "galeao": "yellow",
+  "ipanema-leblon": "yellow",
+  "lagoa-gavea": "green",
+  "santa-teresa": "green",
+  "botafogo-urca": "green",
+  "rocinha": "unknown"
+ }
+}
