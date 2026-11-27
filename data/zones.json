@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-26T22:29:30.395519+00:00",
+ "updated": "2026-11-27T05:19:13.274649+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
- "shootings_at": "2026-11-26T19:59:13.718994+00:00",
+ "shootings_at": "2026-11-27T05:19:13.273254+00:00",
  "areas": [
   {
    "id": "centro-lapa",
@@ -269,7 +269,7 @@
    "bairros": [
     "Santa Teresa"
    ],
-   "score": 19,
+   "score": 18,
    "computed": "green",
    "trend": "down",
    "why": [
