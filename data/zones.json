@@ -1,9 +1,31 @@
 {
- "updated": "2026-11-27T15:30:36.492283+00:00",
+ "updated": "2026-11-27T19:48:10.103497+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
  "shootings_at": "2026-11-27T15:30:36.490914+00:00",
  "areas": [
+  {
+   "id": "airport-road",
+   "name": "Airport route (Maré, Bonsucesso)",
+   "bairros": [
+    "Maré",
+    "Bonsucesso",
+    "Manguinhos",
+    "Ramos"
+   ],
+   "score": 61,
+   "computed": "red",
+   "trend": "flat",
+   "why": [
+    "1,358 street robberies and 1,441 phone or pocket thefts reported in 12 months",
+    "9% fewer (weighted) in the last 3 months than a year earlier",
+    "20 shootings recorded in 30 days",
+    "1 crime report in the news in 14 days"
+   ],
+   "robbery": 1358,
+   "theft": 1441,
+   "previous": "red"
+  },
   {
    "id": "centro-lapa",
    "name": "Centro, Lapa & Port",
@@ -50,26 +72,24 @@
    "previous": "orange"
   },
   {
-   "id": "airport-road",
-   "name": "Airport route (Maré, Bonsucesso)",
+   "id": "copacabana",
+   "name": "Copacabana & Leme",
    "bairros": [
-    "Maré",
-    "Bonsucesso",
-    "Manguinhos",
-    "Ramos"
+    "Copacabana",
+    "Leme"
    ],
-   "score": 56,
-   "computed": "red",
-   "trend": "flat",
+   "score": 46,
+   "computed": "yellow",
+   "trend": "up",
    "why": [
-    "1,358 street robberies and 1,441 phone or pocket thefts reported in 12 months",
-    "9% fewer (weighted) in the last 3 months than a year earlier",
-    "20 shootings recorded in 30 days",
-    "0 crime reports in the news in 14 days"
+    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
+    "17% more (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "2 crime reports in the news in 14 days"
    ],
-   "robbery": 1358,
-   "theft": 1441,
-   "previous": "red"
+   "robbery": 553,
+   "theft": 4358,
+   "previous": "yellow"
   },
   {
    "id": "flamengo-catete",
@@ -95,23 +115,25 @@
    "previous": "yellow"
   },
   {
-   "id": "copacabana",
-   "name": "Copacabana & Leme",
+   "id": "recreio",
+   "name": "Recreio",
    "bairros": [
-    "Copacabana",
-    "Leme"
+    "Recreio dos Bandeirantes",
+    "Vargem Grande",
+    "Vargem Pequena",
+    "Grumari"
    ],
-   "score": 41,
+   "score": 43,
    "computed": "yellow",
-   "trend": "up",
+   "trend": "down",
    "why": [
-    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
-    "17% more (weighted) in the last 3 months than a year earlier",
-    "0 shootings recorded in 30 days",
+    "681 street robberies and 957 phone or pocket thefts reported in 12 months",
+    "19% fewer (weighted) in the last 3 months than a year earlier",
+    "6 shootings recorded in 30 days",
     "1 crime report in the news in 14 days"
    ],
-   "robbery": 553,
-   "theft": 4358,
+   "robbery": 681,
+   "theft": 957,
    "previous": "yellow"
   },
   {
@@ -153,28 +175,6 @@
    ],
    "robbery": 809,
    "theft": 1677,
-   "previous": "yellow"
-  },
-  {
-   "id": "recreio",
-   "name": "Recreio",
-   "bairros": [
-    "Recreio dos Bandeirantes",
-    "Vargem Grande",
-    "Vargem Pequena",
-    "Grumari"
-   ],
-   "score": 38,
-   "computed": "yellow",
-   "trend": "down",
-   "why": [
-    "681 street robberies and 957 phone or pocket thefts reported in 12 months",
-    "19% fewer (weighted) in the last 3 months than a year earlier",
-    "6 shootings recorded in 30 days",
-    "0 crime reports in the news in 14 days"
-   ],
-   "robbery": 681,
-   "theft": 957,
    "previous": "yellow"
   },
   {
