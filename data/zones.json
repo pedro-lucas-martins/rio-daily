@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-27T05:19:13.274649+00:00",
+ "updated": "2026-11-27T15:30:36.492283+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
- "shootings_at": "2026-11-27T05:19:13.273254+00:00",
+ "shootings_at": "2026-11-27T15:30:36.490914+00:00",
  "areas": [
   {
    "id": "centro-lapa",
@@ -64,7 +64,7 @@
    "why": [
     "1,358 street robberies and 1,441 phone or pocket thefts reported in 12 months",
     "9% fewer (weighted) in the last 3 months than a year earlier",
-    "19 shootings recorded in 30 days",
+    "20 shootings recorded in 30 days",
     "0 crime reports in the news in 14 days"
    ],
    "robbery": 1358,
