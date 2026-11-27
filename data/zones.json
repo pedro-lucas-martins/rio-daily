@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-27T19:48:10.103497+00:00",
+ "updated": "2026-11-27T23:38:09.693289+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
- "shootings_at": "2026-11-27T15:30:36.490914+00:00",
+ "shootings_at": "2026-11-27T23:38:09.691543+00:00",
  "areas": [
   {
    "id": "airport-road",
@@ -72,6 +72,28 @@
    "previous": "orange"
   },
   {
+   "id": "recreio",
+   "name": "Recreio",
+   "bairros": [
+    "Recreio dos Bandeirantes",
+    "Vargem Grande",
+    "Vargem Pequena",
+    "Grumari"
+   ],
+   "score": 48,
+   "computed": "yellow",
+   "trend": "down",
+   "why": [
+    "681 street robberies and 957 phone or pocket thefts reported in 12 months",
+    "19% fewer (weighted) in the last 3 months than a year earlier",
+    "6 shootings recorded in 30 days",
+    "2 crime reports in the news in 14 days"
+   ],
+   "robbery": 681,
+   "theft": 957,
+   "previous": "yellow"
+  },
+  {
    "id": "copacabana",
    "name": "Copacabana & Leme",
    "bairros": [
@@ -112,28 +134,6 @@
    ],
    "robbery": 975,
    "theft": 2450,
-   "previous": "yellow"
-  },
-  {
-   "id": "recreio",
-   "name": "Recreio",
-   "bairros": [
-    "Recreio dos Bandeirantes",
-    "Vargem Grande",
-    "Vargem Pequena",
-    "Grumari"
-   ],
-   "score": 43,
-   "computed": "yellow",
-   "trend": "down",
-   "why": [
-    "681 street robberies and 957 phone or pocket thefts reported in 12 months",
-    "19% fewer (weighted) in the last 3 months than a year earlier",
-    "6 shootings recorded in 30 days",
-    "1 crime report in the news in 14 days"
-   ],
-   "robbery": 681,
-   "theft": 957,
    "previous": "yellow"
   },
   {
