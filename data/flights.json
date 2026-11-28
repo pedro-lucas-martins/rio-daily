@@ -265,5 +265,108 @@
   "direct": false,
   "found": "2026-11-27T19:48:47.565642+00:00",
   "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2027-03-26",
+  "return": "2027-04-09",
+  "price": 6021,
+  "out": [
+   "WAW",
+   "ZRH",
+   "FRA",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "FRA",
+   "WAW"
+  ],
+  "airlines": [
+   "Lufthansa",
+   "SWISS"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-28T18:40:36.919551+00:00",
+  "drop": false
+ },
+ {
+  "origin": "KRK",
+  "depart": "2027-03-26",
+  "return": "2027-04-09",
+  "price": 4781,
+  "out": [
+   "KRK",
+   "AMS",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "FOR",
+   "CDG",
+   "KRK"
+  ],
+  "airlines": [
+   "Air France",
+   "Gol",
+   "KLM"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-28T18:40:46.932921+00:00",
+  "drop": false
+ },
+ {
+  "origin": "WAW",
+  "depart": "2027-01-28",
+  "return": "2027-02-11",
+  "price": 5991,
+  "out": [
+   "WAW",
+   "FRA",
+   "FCO",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "FCO",
+   "MUC",
+   "WAW"
+  ],
+  "airlines": [
+   "ITA",
+   "Lufthansa"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-28T18:40:55.459708+00:00",
+  "drop": false
+ },
+ {
+  "origin": "KRK",
+  "depart": "2027-01-28",
+  "return": "2027-02-11",
+  "price": 5991,
+  "out": [
+   "KRK",
+   "FRA",
+   "FCO",
+   "GIG"
+  ],
+  "back": [
+   "GIG",
+   "FCO",
+   "FRA",
+   "KRK"
+  ],
+  "airlines": [
+   "ITA",
+   "Lufthansa"
+  ],
+  "typical": null,
+  "direct": false,
+  "found": "2026-11-28T18:41:13.433343+00:00",
+  "drop": false
  }
 ]
