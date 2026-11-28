@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-28T09:03:28.221064+00:00",
+ "updated": "2026-11-28T17:41:48.872097+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
- "shootings_at": "2026-11-28T09:03:28.216814+00:00",
+ "shootings_at": "2026-11-28T17:41:48.870243+00:00",
  "areas": [
   {
    "id": "airport-road",
@@ -80,7 +80,7 @@
     "Vargem Pequena",
     "Grumari"
    ],
-   "score": 48,
+   "score": 47,
    "computed": "yellow",
    "trend": "down",
    "why": [
@@ -91,26 +91,6 @@
    ],
    "robbery": 681,
    "theft": 957,
-   "previous": "yellow"
-  },
-  {
-   "id": "copacabana",
-   "name": "Copacabana & Leme",
-   "bairros": [
-    "Copacabana",
-    "Leme"
-   ],
-   "score": 46,
-   "computed": "yellow",
-   "trend": "up",
-   "why": [
-    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
-    "17% more (weighted) in the last 3 months than a year earlier",
-    "0 shootings recorded in 30 days",
-    "2 crime reports in the news in 14 days"
-   ],
-   "robbery": 553,
-   "theft": 4358,
    "previous": "yellow"
   },
   {
@@ -134,6 +114,26 @@
    ],
    "robbery": 975,
    "theft": 2450,
+   "previous": "yellow"
+  },
+  {
+   "id": "copacabana",
+   "name": "Copacabana & Leme",
+   "bairros": [
+    "Copacabana",
+    "Leme"
+   ],
+   "score": 45,
+   "computed": "yellow",
+   "trend": "up",
+   "why": [
+    "553 street robberies and 4,358 phone or pocket thefts reported in 12 months",
+    "17% more (weighted) in the last 3 months than a year earlier",
+    "0 shootings recorded in 30 days",
+    "2 crime reports in the news in 14 days"
+   ],
+   "robbery": 553,
+   "theft": 4358,
    "previous": "yellow"
   },
   {
