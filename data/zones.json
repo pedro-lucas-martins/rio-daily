@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-27T23:38:09.693289+00:00",
+ "updated": "2026-11-28T09:03:28.221064+00:00",
  "official_until": "2026-10",
  "has_shootings": true,
- "shootings_at": "2026-11-27T23:38:09.691543+00:00",
+ "shootings_at": "2026-11-28T09:03:28.216814+00:00",
  "areas": [
   {
    "id": "airport-road",
@@ -86,7 +86,7 @@
    "why": [
     "681 street robberies and 957 phone or pocket thefts reported in 12 months",
     "19% fewer (weighted) in the last 3 months than a year earlier",
-    "6 shootings recorded in 30 days",
+    "4 shootings recorded in 30 days",
     "2 crime reports in the news in 14 days"
    ],
    "robbery": 681,
@@ -269,7 +269,7 @@
    "bairros": [
     "Santa Teresa"
    ],
-   "score": 18,
+   "score": 17,
    "computed": "green",
    "trend": "down",
    "why": [

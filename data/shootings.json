@@ -1,45 +1,17 @@
 {
- "at": "2026-11-27T23:38:09.691543+00:00",
+ "at": "2026-11-28T09:03:28.216814+00:00",
  "data": {
-  "guaratiba": {
-   "count": 3,
-   "weight": 0.8282186472821353
-  },
-  "meier": {
-   "count": 1,
-   "weight": 0.125
-  },
-  "vargem pequena": {
-   "count": 1,
-   "weight": 0.125
-  },
-  "madureira": {
-   "count": 2,
-   "weight": 0.4121745887492587
-  },
-  "recreio dos bandeirantes": {
-   "count": 4,
-   "weight": 2.0859507513532707
-  },
-  "bras de pina": {
-   "count": 4,
-   "weight": 1.7260810685975714
-  },
-  "pilares": {
-   "count": 2,
-   "weight": 0.7405722066724582
-  },
   "padre miguel": {
    "count": 3,
-   "weight": 0.9390084603032945
+   "weight": 0.9300367774862579
   },
   "vaz lobo": {
    "count": 1,
-   "weight": 0.13397168281703664
+   "weight": 0.125
   },
   "tomas coelho": {
    "count": 1,
-   "weight": 0.13397168281703664
+   "weight": 0.125
   },
   "cavalcanti": {
    "count": 2,
@@ -47,31 +19,31 @@
   },
   "mare": {
    "count": 17,
-   "weight": 8.4886488830336
+   "weight": 8.313955672992034
   },
   "taquara": {
    "count": 7,
-   "weight": 4.326050704235461
+   "weight": 4.315005267056963
   },
   "realengo": {
    "count": 3,
-   "weight": 0.8871512995523163
+   "weight": 0.8612249351986604
   },
   "cascadura": {
    "count": 4,
-   "weight": 1.1498737597381963
+   "weight": 1.1244980087038705
   },
   "jacarepagua": {
    "count": 6,
-   "weight": 2.3147451285488696
+   "weight": 2.2673923027487692
   },
   "gardenia azul": {
    "count": 2,
-   "weight": 0.6432931910650406
+   "weight": 0.6002137704946738
   },
   "campo grande": {
    "count": 3,
-   "weight": 1.112051976944699
+   "weight": 1.0710646870247296
   },
   "lins de vasconcelos": {
    "count": 2,
@@ -83,11 +55,11 @@
   },
   "cidade de deus": {
    "count": 2,
-   "weight": 0.9473228540689987
+   "weight": 0.8838834764831844
   },
   "costa barros": {
    "count": 8,
-   "weight": 3.8759243601918003
+   "weight": 3.824774038444266
   },
   "guadalupe": {
    "count": 2,
@@ -103,19 +75,19 @@
   },
   "iraja": {
    "count": 2,
-   "weight": 0.818635305761517
+   "weight": 0.8050367774862579
   },
   "bangu": {
-   "count": 3,
-   "weight": 0.8897783440528875
+   "count": 4,
+   "weight": 1.8897783440528875
   },
   "tijuca": {
    "count": 2,
-   "weight": 0.717637640824031
+   "weight": 0.703063099089059
   },
   "andarai": {
    "count": 4,
-   "weight": 1.9990156344459986
+   "weight": 1.865147537535999
   },
   "lagoa": {
    "count": 1,
@@ -123,15 +95,15 @@
   },
   "taua": {
    "count": 2,
-   "weight": 0.8930122032706489
+   "weight": 0.8332098474964892
   },
   "tanque": {
    "count": 4,
-   "weight": 1.2157407801050752
+   "weight": 1.176443760144854
   },
   "agua santa": {
    "count": 1,
-   "weight": 0.23325824788420185
+   "weight": 0.217637640824031
   },
   "vicente de carvalho": {
    "count": 4,
@@ -139,7 +111,7 @@
   },
   "curicica": {
    "count": 4,
-   "weight": 2.3047851683512066
+   "weight": 2.2868418027171336
   },
   "acari": {
    "count": 2,
@@ -155,11 +127,19 @@
   },
   "piedade": {
    "count": 1,
-   "weight": 0.2679433656340733
+   "weight": 0.25
+  },
+  "guaratiba": {
+   "count": 2,
+   "weight": 0.6852752816480621
   },
   "caju": {
    "count": 2,
-   "weight": 0.7679433656340733
+   "weight": 0.734459861402477
+  },
+  "madureira": {
+   "count": 1,
+   "weight": 0.2679433656340733
   },
   "camorim": {
    "count": 1,
@@ -167,7 +147,7 @@
   },
   "engenho da rainha": {
    "count": 2,
-   "weight": 0.6867152449638286
+   "weight": 0.6407279793425324
   },
   "senador camara": {
    "count": 1,
@@ -175,23 +155,27 @@
   },
   "catete": {
    "count": 1,
-   "weight": 0.3535533905932738
+   "weight": 0.32987697769322355
   },
   "cordovil": {
    "count": 3,
-   "weight": 1.6658057869495093
+   "weight": 1.6323222827179131
+  },
+  "bras de pina": {
+   "count": 3,
+   "weight": 1.6010810685975714
   },
   "manguinhos": {
    "count": 2,
-   "weight": 0.8142044232756616
+   "weight": 0.7888286722413358
   },
   "vigario geral": {
    "count": 1,
-   "weight": 0.37892914162759955
+   "weight": 0.3535533905932738
   },
   "quintino bocaiuva": {
    "count": 1,
-   "weight": 0.43527528164806206
+   "weight": 0.40612619817811774
   },
   "inhauma": {
    "count": 1,
@@ -199,9 +183,17 @@
   },
   "itanhanga": {
    "count": 1,
-   "weight": 0.5743491774985174
+   "weight": 0.5358867312681466
+  },
+  "recreio dos bandeirantes": {
+   "count": 3,
+   "weight": 1.9609507513532705
   },
   "centro": {
+   "count": 1,
+   "weight": 0.5743491774985174
+  },
+  "pilares": {
    "count": 1,
    "weight": 0.6155722066724582
   },
@@ -211,7 +203,7 @@
   },
   "vasco da gama": {
    "count": 1,
-   "weight": 0.8122523963562356
+   "weight": 0.757858283255199
   },
   "penha": {
    "count": 1,
