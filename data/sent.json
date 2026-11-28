@@ -1,12 +1,12 @@
 {
- "last": "2026-11-27",
+ "last": "2026-11-28",
  "levels": {
   "airport-road": "red",
   "centro-lapa": "orange",
   "barra": "orange",
-  "copacabana": "yellow",
-  "flamengo-catete": "yellow",
   "recreio": "yellow",
+  "flamengo-catete": "yellow",
+  "copacabana": "yellow",
   "tijuca": "yellow",
   "sao-cristovao": "yellow",
   "maracana": "yellow",
